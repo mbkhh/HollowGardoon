@@ -3,18 +3,19 @@
 [ext_resource type="Script" uid="uid://3qgpt6tjp0rl" path="res://scripts/game.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="2_dinhu"]
 [ext_resource type="Theme" uid="uid://bkse6ryihngnw" path="res://assets/sprites/Assets/UI/Themes/Button.tres" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://chiwt2btq2p2c" path="res://scenes/Planets/whitehole.tscn" id="2_kvuet"]
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_gee14"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="4_iywne"]
-[ext_resource type="Texture2D" uid="uid://b7muv0dkwnhld" path="res://assets/sprites/Assets/UI/TitleBox.png" id="4_vtaks"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="11_kvpfn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtaks"]
 texture = ExtResource("3_0tnpc")
+
+[sub_resource type="ImageTexture" id="ImageTexture_dinhu"]
 
 [sub_resource type="Curve2D" id="Curve2D_gee14"]
 bake_interval = 303.66
@@ -32,6 +33,11 @@ point_count = 2
 [node name="game" type="Node2D" unique_id=209068864]
 script = ExtResource("1_uwrxv")
 
+[node name="Whitehole" parent="." unique_id=234553018 instance=ExtResource("2_kvuet")]
+position = Vector2(-2.9999962, -193.00002)
+scale = Vector2(5.3190436, 5.3190436)
+gravity_strength_factor = 0.0
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1067734490]
 
 [node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("2_dinhu")]
@@ -39,10 +45,10 @@ script = ExtResource("1_uwrxv")
 [node name="Buttons" type="Node" parent="." unique_id=1126781375]
 
 [node name="Start" type="Button" parent="Buttons" unique_id=1034794483]
-offset_left = -275.0
-offset_top = -44.0
-offset_right = -25.0
-offset_bottom = 56.0
+offset_left = -124.0
+offset_top = -53.0
+offset_right = 126.0
+offset_bottom = 47.0
 theme = ExtResource("2_iywne")
 text = "Start"
 
@@ -52,16 +58,16 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -532.17645
-offset_top = -1829.6
-offset_right = -282.17645
-offset_bottom = -1729.6
+offset_left = -676.17645
+offset_top = -1724.6
+offset_right = -426.17645
+offset_bottom = -1624.6
 theme = ExtResource("2_iywne")
 text = "Exit"
 
 [node name="Setting" type="Button" parent="Buttons" unique_id=220760008]
 offset_left = 413.0
-offset_top = 196.0
+offset_top = 177.0
 offset_right = 539.0
 offset_bottom = 296.0
 pivot_offset = Vector2(58, 50)
@@ -72,18 +78,11 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_vtaks")
 theme_override_styles/focus = SubResource("StyleBoxTexture_vtaks")
 
 [node name="TitleBox" type="Sprite2D" parent="Buttons" unique_id=1793408442]
+visible = false
 z_index = -2
-position = Vector2(0, -157.00002)
-scale = Vector2(1.65, 1.65)
-texture = ExtResource("4_vtaks")
-
-[node name="shop" type="Button" parent="Buttons" unique_id=1566798450]
-offset_left = 25.0
-offset_top = -44.0
-offset_right = 275.0
-offset_bottom = 56.0
-theme = ExtResource("2_iywne")
-text = "Shop"
+position = Vector2(1, -141)
+scale = Vector2(1.1591173, 2.3796875)
+texture = SubResource("ImageTexture_dinhu")
 
 [node name="About Us" type="Button" parent="Buttons" unique_id=694941058]
 anchors_preset = -1
@@ -91,10 +90,10 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -832.17645
-offset_top = -1829.6
-offset_right = -582.17645
-offset_bottom = -1729.6
+offset_left = -679.17645
+offset_top = -1858.6
+offset_right = -429.17645
+offset_bottom = -1758.6
 theme = ExtResource("2_iywne")
 text = "About Us"
 
@@ -113,8 +112,8 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1313.9878
-SelectedType = "planet01"
+rotation = -1473.9857
+SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
 orbit_radius = 118.75
@@ -124,16 +123,10 @@ position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_lbhrr")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1921871531]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("4_iywne")
-
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
-position = Vector2(336, -96.99999)
-rotation = 353.73935
-SelectedType = "planet03"
+position = Vector2(484.00003, -66.00001)
+rotation = -128.40836
+SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
@@ -156,16 +149,16 @@ rotation = 2.1786954
 speed = 50.0
 
 [node name="Label" type="Label" parent="." unique_id=587825357]
-offset_left = -264.0
-offset_top = -223.0
-offset_right = 278.0
-offset_bottom = -99.0
+offset_left = -276.0
+offset_top = -265.0
+offset_right = 266.0
+offset_bottom = -80.0
 theme = ExtResource("2_iywne")
-theme_override_colors/font_color = Color(0.9529412, 0.7607843, 0.52156866, 1)
-theme_override_colors/font_shadow_color = Color(0.12941177, 0.3882353, 0.5686275, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
-text = "Gardoon"
+theme_override_font_sizes/font_size = 150
+text = "Void"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -177,5 +170,4 @@ bus = &"SFX"
 [connection signal="button_down" from="Buttons/Start" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Buttons/Exit" to="." method="_on_button_2_button_down"]
 [connection signal="pressed" from="Buttons/Setting" to="." method="_on_setting_pressed"]
-[connection signal="pressed" from="Buttons/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Buttons/About Us" to="." method="_on_about_us_pressed"]

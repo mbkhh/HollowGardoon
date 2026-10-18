@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="4_ckc44"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="5_htctk"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="5_o2xx4"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="6_htctk"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="10_o2xx4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htctk"]
@@ -79,7 +78,7 @@ texture = ExtResource("3_7plkq")
 
 [node name="Planet2" parent="background" unique_id=687455846 instance=ExtResource("4_ckc44")]
 position = Vector2(-440, -9)
-rotation = -709.7752
+rotation = -710.7039
 SelectedType = "planet04"
 radius = 75.0
 mass = 56.25
@@ -90,15 +89,9 @@ position = Vector2(3, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_o2xx4")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1802592442]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("6_htctk")
-
 [node name="Planet" parent="background" unique_id=96890017 instance=ExtResource("4_ckc44")]
 position = Vector2(463.99997, 141.00003)
-rotation = -143.07507
+rotation = -145.34296
 SelectedType = "planet09"
 radius = 74.0
 mass = 54.76

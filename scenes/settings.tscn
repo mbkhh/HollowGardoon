@@ -6,7 +6,6 @@
 [ext_resource type="Theme" uid="uid://x17b0mv7nh7a" path="res://assets/sprites/Assets/UI/Themes/setting.tres" id="2_am25x"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="3_gjs24"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="4_am25x"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="5_4ppmf"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="6_uhhto"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="7_83j8s"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="9_4ppmf"]
@@ -93,7 +92,7 @@ texture = ExtResource("2_83j8s")
 
 [node name="Planet2" parent="background" unique_id=423020146 instance=ExtResource("3_gjs24")]
 position = Vector2(-425, 164)
-rotation = -902.1977
+rotation = -902.0405
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -104,15 +103,9 @@ position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_am25x")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1934842165]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("5_4ppmf")
-
 [node name="Planet" parent="background" unique_id=140036638 instance=ExtResource("3_gjs24")]
 position = Vector2(336, -96.99999)
-rotation = -624.38947
+rotation = -625.13684
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
