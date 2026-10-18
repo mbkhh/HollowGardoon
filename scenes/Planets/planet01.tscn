@@ -1,20 +1,25 @@
-[gd_scene load_steps=17 format=3 uid="uid://04tw7iirgh22"]
+[gd_scene format=3 uid="uid://04tw7iirgh22"]
 
 [ext_resource type="Script" uid="uid://odxj2afe3vfu" path="res://scripts/planet02.gd" id="1_foe20"]
+[ext_resource type="Texture2D" uid="uid://dvdrbwo2ib8xf" path="res://assets/sprites/Assets/Planets/PlanetFinal.png" id="2_cot5x"]
 [ext_resource type="Texture2D" uid="uid://n7wbfoonwl2o" path="res://assets/sprites/Assets/Planets/planet01.png" id="2_hypca"]
 [ext_resource type="Texture2D" uid="uid://backmccgvyggf" path="res://assets/sprites/Assets/Planets/planet02.png" id="3_cot5x"]
 [ext_resource type="Texture2D" uid="uid://b7ukm0xueh57s" path="res://assets/sprites/Assets/Planets/planet03.png" id="4_03olw"]
 [ext_resource type="Texture2D" uid="uid://bbdyt0rj2o5x6" path="res://assets/sprites/Assets/Planets/planet04.png" id="5_3ngpk"]
 [ext_resource type="Texture2D" uid="uid://d2wbtnhj27oqg" path="res://assets/sprites/Assets/Planets/planet05.png" id="6_u2tlw"]
 [ext_resource type="Texture2D" uid="uid://dwoql8fulyk78" path="res://assets/sprites/Assets/Planets/planet06.png" id="7_wuq3i"]
-[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="8_7c62b"]
+[ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="8_7c62b"]
 [ext_resource type="Texture2D" uid="uid://dxjvv3xu7dj88" path="res://assets/sprites/Assets/Planets/planet07.png" id="8_xgbed"]
 [ext_resource type="Texture2D" uid="uid://cxng7wydjv6f0" path="res://assets/sprites/Assets/Planets/planet08.png" id="9_bixyo"]
 [ext_resource type="Texture2D" uid="uid://dn4ylyrxpdgqj" path="res://assets/sprites/flag.png" id="9_nm1ia"]
 [ext_resource type="Texture2D" uid="uid://cy0xd6a4yvyrb" path="res://assets/sprites/Assets/Planets/planet09.png" id="10_bhwdw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wmcrj"]
-radius = 90.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_03olw"]
+radius = 150.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ngpk"]
+atlas = ExtResource("2_cot5x")
+region = Rect2(0, 0, 326, 309)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_foe20"]
 animations = [{
@@ -22,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_hypca")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet01",
 "speed": 1.0
 }, {
@@ -30,7 +35,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_cot5x")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet02",
 "speed": 5.0
 }, {
@@ -38,7 +43,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_03olw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet03",
 "speed": 5.0
 }, {
@@ -46,7 +51,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_3ngpk")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet04",
 "speed": 5.0
 }, {
@@ -54,7 +59,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_u2tlw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet05",
 "speed": 5.0
 }, {
@@ -62,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_wuq3i")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet06",
 "speed": 5.0
 }, {
@@ -70,7 +75,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_xgbed")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet07",
 "speed": 5.0
 }, {
@@ -78,7 +83,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_bixyo")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet08",
 "speed": 5.0
 }, {
@@ -86,19 +91,27 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_bhwdw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"planet09",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ngpk")
+}],
+"loop": 1,
+"name": &"planet10",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_iy8fb"]
-radius = 137.5
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2tlw"]
+radius = 212.5
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ybj0v"]
-radius = 90.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_wuq3i"]
+radius = 150.0
 
-[node name="Planet" type="StaticBody2D"]
-rotation = -516.9491
+[node name="Planet" type="StaticBody2D" unique_id=941750582]
+rotation = -479.3667
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_foe20")
@@ -107,33 +120,33 @@ mass = 25.0
 orbit_radius = 87.5
 metadata/_edit_vertical_guides_ = [100.0]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1356742891]
 scale = Vector2(1.0000004, 1.0000004)
-shape = SubResource("CircleShape2D_wmcrj")
+shape = SubResource("CircleShape2D_03olw")
 debug_color = Color(0.8376693, 0.20860654, 0.7999173, 0.41960785)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1785683712]
 scale = Vector2(0.33333334, 0.33333334)
 sprite_frames = SubResource("SpriteFrames_foe20")
-animation = &"planet06"
+animation = &"planet10"
 
-[node name="GravityWell" type="Area2D" parent="."]
+[node name="GravityWell" type="Area2D" parent="." unique_id=262378179]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityWell"]
-shape = SubResource("CircleShape2D_iy8fb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityWell" unique_id=964318502]
+shape = SubResource("CircleShape2D_u2tlw")
 
-[node name="OrbitPath" type="Line2D" parent="GravityWell"]
+[node name="OrbitPath" type="Line2D" parent="GravityWell" unique_id=135103808]
 points = PackedVector2Array(87.5, 0, 87.07867, 8.5765, 85.81871, 17.070404, 83.732285, 25.399908, 80.839455, 33.4848, 77.16811, 41.247215, 72.753586, 48.612396, 67.63841, 55.50941, 61.87184, 61.87184, 55.50941, 67.63841, 48.612396, 72.753586, 41.247215, 77.16811, 33.4848, 80.839455, 25.399908, 83.732285, 17.070404, 85.81871, 8.5765, 87.07867, 5.357653e-15, 87.5, -8.5765, 87.07867, -17.070404, 85.81871, -25.399908, 83.732285, -33.4848, 80.839455, -41.247215, 77.16811, -48.612396, 72.753586, -55.50941, 67.63841, -61.87184, 61.87184, -67.63841, 55.50941, -72.753586, 48.612396, -77.16811, 41.247215, -80.839455, 33.4848, -83.732285, 25.399908, -85.81871, 17.070404, -87.07867, 8.5765, -87.5, 1.0715306e-14, -87.07867, -8.5765, -85.81871, -17.070404, -83.732285, -25.399908, -80.839455, -33.4848, -77.16811, -41.247215, -72.753586, -48.612396, -67.63841, -55.50941, -61.87184, -61.87184, -55.50941, -67.63841, -48.612396, -72.753586, -41.247215, -77.16811, -33.4848, -80.839455, -25.399908, -83.732285, -17.070404, -85.81871, -8.5765, -87.07867, -1.6072958e-14, -87.5, 8.5765, -87.07867, 17.070404, -85.81871, 25.399908, -83.732285, 33.4848, -80.839455, 41.247215, -77.16811, 48.612396, -72.753586, 55.50941, -67.63841, 61.87184, -61.87184, 67.63841, -55.50941, 72.753586, -48.612396, 77.16811, -41.247215, 80.839455, -33.4848, 83.732285, -25.399908, 85.81871, -17.070404, 87.07867, -8.5765, 87.5, -2.1430611e-14)
 joint_mode = 2
 
-[node name="killzone" parent="." instance=ExtResource("8_7c62b")]
+[node name="killzone" parent="." unique_id=429149373 instance=ExtResource("8_7c62b")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1875679098]
 scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("CircleShape2D_ybj0v")
+shape = SubResource("CircleShape2D_wuq3i")
 debug_color = Color(0.64667875, 0.5145223, 0.26367807, 0.41960785)
 
-[node name="Flag" type="Sprite2D" parent="."]
+[node name="Flag" type="Sprite2D" parent="." unique_id=1172826826]
 visible = false
 position = Vector2(-3.73555, -62.67613)
 scale = Vector2(0.02540707, 0.018968547)
