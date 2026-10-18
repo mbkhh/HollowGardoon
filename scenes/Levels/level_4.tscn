@@ -69,7 +69,7 @@ position = Vector2(612, 354)
 
 [node name="Planet8" parent="goal planet" unique_id=783388378 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(3115, 408.00006)
-rotation = 161.95288
+rotation = 212.25366
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -81,7 +81,7 @@ orbit_radius = 137.5
 
 [node name="Planet4" parent="planets" unique_id=1029304690 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(2593, 223)
-rotation = 1771.4404
+rotation = 1801.3065
 SelectedType = "planet03"
 radius = 60.0
 mass = 36.0
@@ -89,7 +89,7 @@ orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=811109282 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(1061, 278)
-rotation = -1901.0422
+rotation = -1910.4736
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -97,7 +97,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=512885841 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(513, 212)
-rotation = -2580.5398
+rotation = -2637.1282
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -312,9 +312,8 @@ offset_bottom = 570.0
 theme_override_fonts/font = ExtResource("15_0b27f")
 theme_override_font_sizes/font_size = 28
 text = "
-این پرچم‌ها پیش از خاموشی جهان برپا شده‌اند.
-کسی این مسیر را می‌شناخته...
-کسی می‌دانسته که روزی، مسافری مثل تو به آن نیاز خواهد داشت"
+این پرچم‌ها را مردم روزگاران قدیم، برای مسافران برپا کرده‌اند، 
+پرچم هایی که دیگر نگاه هیچ مسافری به آنها نخواهد افتاد."
 horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]
