@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cep1ih78c8evs"]
+[gd_resource type="Theme" format=3 uid="uid://cep1ih78c8evs"]
 
 [ext_resource type="FontFile" uid="uid://du6vw2flf7bnj" path="res://assets/sprites/Assets/UI/Themes/century-gothic-bold.ttf" id="1_5ibxl"]
 [ext_resource type="Texture2D" uid="uid://jodkxitkwy8p" path="res://assets/sprites/Assets/UI/Levels_Gray.png" id="2_e5q42"]

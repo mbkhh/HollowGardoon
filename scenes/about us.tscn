@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://33kdrofyxgp8"]
+[gd_scene format=3 uid="uid://33kdrofyxgp8"]
 
 [ext_resource type="Script" uid="uid://bpfg76tmeaf58" path="res://scripts/about_us.gd" id="1_bjp2s"]
 [ext_resource type="Theme" uid="uid://x17b0mv7nh7a" path="res://assets/sprites/Assets/UI/Themes/setting.tres" id="2_5i3i6"]
@@ -37,10 +37,10 @@ texture = ExtResource("9_rc30t")
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c76q0"]
 blend_mode = 1
 
-[node name="Settings" type="Node2D"]
+[node name="Settings" type="Node2D" unique_id=547728667]
 script = ExtResource("1_bjp2s")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=2027122852]
 z_index = -1
 offset_left = -109.0
 offset_top = -129.0
@@ -49,7 +49,7 @@ offset_bottom = 141.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c76q0")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=1013143372]
 offset_left = -73.0
 offset_top = -108.0
 offset_right = 69.0
@@ -59,7 +59,7 @@ theme_override_fonts/font = ExtResource("3_5i3i6")
 text = "Team PixL:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label3" type="Label" parent="Label2"]
+[node name="Label3" type="Label" parent="Label2" unique_id=988877762]
 layout_mode = 0
 offset_left = -4.0
 offset_top = 52.0
@@ -74,7 +74,7 @@ text = "محمد باقر خندان
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2059090566]
 offset_left = -55.0
 offset_top = -262.0
 offset_right = 56.0
@@ -83,7 +83,7 @@ theme = ExtResource("2_5i3i6")
 text = "about us"
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Label"]
+[node name="Panel" type="Panel" parent="Label" unique_id=1409167853]
 z_index = -1
 layout_mode = 0
 offset_left = -70.0
@@ -92,60 +92,60 @@ offset_right = 182.0
 offset_bottom = 66.0
 metadata/_edit_use_anchors_ = true
 
-[node name="background" type="Node2D" parent="."]
+[node name="background" type="Node2D" parent="." unique_id=1279696553]
 z_index = -4096
 
-[node name="Background0" type="Sprite2D" parent="background"]
+[node name="Background0" type="Sprite2D" parent="background" unique_id=1887160142]
 position = Vector2(73, 11)
 texture = ExtResource("3_c76q0")
 
-[node name="Background2" type="Sprite2D" parent="background"]
+[node name="Background2" type="Sprite2D" parent="background" unique_id=637664477]
 position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_1bhnm")
 
-[node name="Background1" type="Sprite2D" parent="background"]
+[node name="Background1" type="Sprite2D" parent="background" unique_id=1992904826]
 z_index = 10
 position = Vector2(1, -14.000002)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("7_2sa3g")
 
-[node name="Sun" parent="background" instance=ExtResource("8_vwiw6")]
+[node name="Sun" parent="background" unique_id=36102581 instance=ExtResource("8_vwiw6")]
 position = Vector2(1, -327)
-rotation = 26.702692
+rotation = 5.743327
 scale = Vector2(0.99999994, 0.99999994)
 radius = 300.0
 mass = 1800.0
 orbit_radius = 400.0
 
-[node name="Planet" parent="background" instance=ExtResource("5_e1qjp")]
+[node name="Planet" parent="background" unique_id=1511852575 instance=ExtResource("5_e1qjp")]
 position = Vector2(785, -338)
-rotation = -981.17456
+rotation = -956.8684
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
 
-[node name="Path2D" type="Path2D" parent="background"]
+[node name="Path2D" type="Path2D" parent="background" unique_id=1324350481]
 position = Vector2(76, -283)
 curve = SubResource("Curve2D_1g033")
 
-[node name="AsteroidMover" parent="background/Path2D" instance=ExtResource("8_uob3k")]
+[node name="AsteroidMover" parent="background/Path2D" unique_id=1230646194 instance=ExtResource("8_uob3k")]
 position = Vector2(-733, -90)
 rotation = 0.44338816
 speed = 150.0
 
-[node name="Path2D2" type="Path2D" parent="background"]
+[node name="Path2D2" type="Path2D" parent="background" unique_id=1344833872]
 curve = SubResource("Curve2D_01roj")
 
-[node name="AsteroidMover" parent="background/Path2D2" instance=ExtResource("8_uob3k")]
+[node name="AsteroidMover" parent="background/Path2D2" unique_id=414831180 instance=ExtResource("8_uob3k")]
 position = Vector2(926, -116)
 rotation = 3.0282593
 speed = 50.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=317281565]
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="Button" parent="." unique_id=195087291]
 anchors_preset = -1
 anchor_left = 0.48366013
 anchor_top = 2.9777777
@@ -163,18 +163,18 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_gjs24")
 text = "
 "
 
-[node name="PixLLogo" type="Sprite2D" parent="."]
+[node name="PixLLogo" type="Sprite2D" parent="." unique_id=2139461787]
 position = Vector2(-291, 9.536743e-06)
 scale = Vector2(0.19726563, 0.19726563)
 texture = ExtResource("11_c76q0")
 
-[node name="PixLLogo" type="Sprite2D" parent="PixLLogo"]
+[node name="PixLLogo" type="Sprite2D" parent="PixLLogo" unique_id=1529345581]
 z_index = -1
 material = SubResource("CanvasItemMaterial_c76q0")
 scale = Vector2(1.1, 1.1)
 texture = ExtResource("11_c76q0")
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel2" type="Panel" parent="." unique_id=6385704]
 z_index = -1
 offset_left = 459.0
 offset_top = -106.0
@@ -184,21 +184,21 @@ rotation = 1.5707964
 theme_override_styles/panel = SubResource("StyleBoxTexture_c76q0")
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2" unique_id=1369724324]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 236.0
-offset_right = 235.0
-offset_bottom = 401.0
+offset_left = 18.000008
+offset_top = 237.0
+offset_right = 229.0
+offset_bottom = 409.0
 rotation = -1.5707964
 theme_override_colors/default_color = Color(0.11764706, 0.3764706, 0.5568628, 1)
 theme_override_fonts/normal_font = ExtResource("3_5i3i6")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "لینک گیت‌هاب پروژه
- بعد از رویداد باگز بازی
+ بعد از رویداد GameCrafter
  پابلیک خواهد شد
-[url=https://github.com/mbkhh/pixL](کلیک کنید)[/url]"
+[url=https://github.com/mbkhh/HollowGardoon](کلیک کنید)[/url]"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
