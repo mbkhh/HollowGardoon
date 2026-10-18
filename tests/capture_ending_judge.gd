@@ -26,12 +26,13 @@ func _run() -> void:
 	current_scene.grid.get_child(14).pressed.emit()
 	await frames(10)
 	var level = current_scene
-	var goal = level.get_node("goal planet/Planet8")
+	var flight = level.get_node("FinalFlight")
 	var rocket = level.get_node("Rocket")
 	rocket.current_state = rocket.State.TRAVELING
 	rocket.orbiting_planet = null
-	rocket.teleport(goal.global_position + Vector2(goal.orbit_radius-3,0))
-	for i in range(120):
+	rocket.teleport(flight.global_position - Vector2(120,0))
+	rocket.preserved_velocity = Vector2(1000,0)
+	for i in range(1600):
 		if level.has_node("StoryEnding"):
 			break
 		await frames(1)

@@ -78,7 +78,7 @@ position = Vector2(278, 313)
 
 [node name="Planet8" parent="goal planet" unique_id=1007667171 groups=["planets"] instance=ExtResource("8_kwa6m")]
 position = Vector2(2587.0002, 599)
-rotation = -401.58463
+rotation = -435.36478
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -92,7 +92,7 @@ orbit_radius = 137.5
 
 [node name="Planet2" parent="planets" unique_id=930368476 groups=["planets"] instance=ExtResource("8_kwa6m")]
 position = Vector2(2125, 213.99994)
-rotation = -269.44595
+rotation = -295.96756
 SelectedType = "planet08"
 radius = 60.0
 mass = 36.0
@@ -100,14 +100,14 @@ orbit_radius = 100.0
 
 [node name="Planet4" parent="planets" unique_id=144116172 groups=["planets"] instance=ExtResource("8_kwa6m")]
 position = Vector2(811, 417.99997)
-rotation = -100.316246
+rotation = -68.420525
 radius = 150.0
 mass = 225.0
 orbit_radius = 212.5
 
 [node name="Planet6" parent="planets" unique_id=901400204 groups=["planets"] instance=ExtResource("8_kwa6m")]
 position = Vector2(185, 360.00006)
-rotation = 278.5459
+rotation = 289.43372
 SelectedType = "planet01"
 radius = 60.0
 mass = 36.0
@@ -115,7 +115,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=385137561 groups=["planets"] instance=ExtResource("8_kwa6m")]
 position = Vector2(1407.0001, 636.00006)
-rotation = 28.564486
+rotation = 6.8274307
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet08"
 radius = 90.0
@@ -126,7 +126,7 @@ orbit_radius = 137.5
 
 [node name="Sun" parent="suns" unique_id=50429994 groups=["planets"] instance=ExtResource("9_r6ke6")]
 position = Vector2(1436, 60)
-rotation = -221.77455
+rotation = -204.18654
 density = 0.015
 mass = 150.0
 
@@ -218,9 +218,7 @@ offset_right = -34.0
 offset_bottom = 423.0
 theme_override_fonts/font = ExtResource("16_mwkwm")
 theme_override_font_sizes/font_size = 32
-text = "همش همین بود
-خوش گذشت، سفرت بی‌خطر!"
-horizontal_alignment = 2
+text = "--. --- --- -.. -... -.-- . --..-- ....... -- -.-- ....... .-.. --- ...- ."
 autowrap_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]
