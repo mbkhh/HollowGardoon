@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_gee14"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://bm0xglisepdv6" path="res://assets/fonts/Gelipo-Regular.ttf" id="11_dinhu"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="11_kvpfn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtaks"]
@@ -150,7 +151,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1434.4111
+rotation = -1406.0771
 SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
@@ -163,7 +164,7 @@ texture = ExtResource("3_lbhrr")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -147.2239
+rotation = -184.63362
 SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
@@ -188,13 +189,14 @@ speed = 50.0
 
 [node name="Label" type="Label" parent="." unique_id=587825357]
 offset_left = -276.0
-offset_top = -265.0
+offset_top = -249.0
 offset_right = 266.0
-offset_bottom = -80.0
+offset_bottom = -64.0
 theme = ExtResource("2_iywne")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("11_dinhu")
 theme_override_font_sizes/font_size = 150
 text = "Void"
 horizontal_alignment = 1
