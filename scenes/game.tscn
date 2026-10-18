@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://3qgpt6tjp0rl" path="res://scripts/game.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="2_dinhu"]
 [ext_resource type="Theme" uid="uid://bkse6ryihngnw" path="res://assets/sprites/Assets/UI/Themes/Button.tres" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://chiwt2btq2p2c" path="res://scenes/Planets/whitehole.tscn" id="2_kvuet"]
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_gee14"]
 [ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="4_iywne"]
-[ext_resource type="Texture2D" uid="uid://b7muv0dkwnhld" path="res://assets/sprites/Assets/UI/TitleBox.png" id="4_vtaks"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="11_kvpfn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vtaks"]
 texture = ExtResource("3_0tnpc")
+
+[sub_resource type="ImageTexture" id="ImageTexture_dinhu"]
 
 [sub_resource type="Curve2D" id="Curve2D_gee14"]
 bake_interval = 303.66
@@ -31,6 +33,11 @@ point_count = 2
 
 [node name="game" type="Node2D" unique_id=209068864]
 script = ExtResource("1_uwrxv")
+
+[node name="Whitehole" parent="." unique_id=234553018 instance=ExtResource("2_kvuet")]
+position = Vector2(-2.9999962, -193.00002)
+scale = Vector2(5.3190436, 5.3190436)
+gravity_strength_factor = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1067734490]
 
@@ -76,7 +83,7 @@ visible = false
 z_index = -2
 position = Vector2(1, -141)
 scale = Vector2(1.1591173, 2.3796875)
-texture = ExtResource("4_vtaks")
+texture = SubResource("ImageTexture_dinhu")
 
 [node name="shop" type="Button" parent="Buttons" unique_id=1566798450]
 offset_left = 25.0
@@ -114,7 +121,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1429.2201
+rotation = -1455.8802
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -132,9 +139,8 @@ scale = Vector2(0.65, 0.65)
 texture = ExtResource("4_iywne")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
-position = Vector2(336, -96.99999)
-rotation = -88.48764
-SelectedType = "planet03"
+position = Vector2(484.00003, -66.00001)
+rotation = -112.18698
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
@@ -162,8 +168,7 @@ offset_top = -265.0
 offset_right = 266.0
 offset_bottom = -80.0
 theme = ExtResource("2_iywne")
-theme_override_colors/font_color = Color(0.067291945, 0.22260696, 0.9999487, 1)
-theme_override_colors/font_shadow_color = Color(0.47195482, 0.3360206, 0.27360633, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_font_sizes/font_size = 150
