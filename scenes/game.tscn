@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_gee14"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="11_kvpfn"]
@@ -46,10 +45,10 @@ gravity_strength_factor = 0.0
 [node name="Buttons" type="Node" parent="." unique_id=1126781375]
 
 [node name="Start" type="Button" parent="Buttons" unique_id=1034794483]
-offset_left = -275.0
-offset_top = -44.0
-offset_right = -25.0
-offset_bottom = 56.0
+offset_left = -124.0
+offset_top = -53.0
+offset_right = 126.0
+offset_bottom = 47.0
 theme = ExtResource("2_iywne")
 text = "Start"
 
@@ -59,16 +58,16 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -532.17645
-offset_top = -1829.6
-offset_right = -282.17645
-offset_bottom = -1729.6
+offset_left = -676.17645
+offset_top = -1724.6
+offset_right = -426.17645
+offset_bottom = -1624.6
 theme = ExtResource("2_iywne")
 text = "Exit"
 
 [node name="Setting" type="Button" parent="Buttons" unique_id=220760008]
 offset_left = 413.0
-offset_top = 186.0
+offset_top = 177.0
 offset_right = 539.0
 offset_bottom = 296.0
 pivot_offset = Vector2(58, 50)
@@ -85,24 +84,16 @@ position = Vector2(1, -141)
 scale = Vector2(1.1591173, 2.3796875)
 texture = SubResource("ImageTexture_dinhu")
 
-[node name="shop" type="Button" parent="Buttons" unique_id=1566798450]
-offset_left = 25.0
-offset_top = -44.0
-offset_right = 275.0
-offset_bottom = 56.0
-theme = ExtResource("2_iywne")
-text = "Shop"
-
 [node name="About Us" type="Button" parent="Buttons" unique_id=694941058]
 anchors_preset = -1
 anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -832.17645
-offset_top = -1829.6
-offset_right = -582.17645
-offset_bottom = -1729.6
+offset_left = -679.17645
+offset_top = -1858.6
+offset_right = -429.17645
+offset_bottom = -1758.6
 theme = ExtResource("2_iywne")
 text = "About Us"
 
@@ -121,8 +112,8 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1455.8802
-SelectedType = "planet01"
+rotation = -1473.9857
+SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
 orbit_radius = 118.75
@@ -132,15 +123,10 @@ position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_lbhrr")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1921871531]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("4_iywne")
-
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -112.18698
+rotation = -128.40836
+SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
@@ -184,5 +170,4 @@ bus = &"SFX"
 [connection signal="button_down" from="Buttons/Start" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Buttons/Exit" to="." method="_on_button_2_button_down"]
 [connection signal="pressed" from="Buttons/Setting" to="." method="_on_setting_pressed"]
-[connection signal="pressed" from="Buttons/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Buttons/About Us" to="." method="_on_about_us_pressed"]

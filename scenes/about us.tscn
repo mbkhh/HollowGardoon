@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_vwiw6"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="5_e1qjp"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="6_1bhnm"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="7_2sa3g"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="8_uob3k"]
 [ext_resource type="PackedScene" uid="uid://ea7p22q0f38d" path="res://scenes/Planets/sun.tscn" id="8_vwiw6"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="9_rc30t"]
@@ -105,15 +104,9 @@ position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_1bhnm")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1992904826]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("7_2sa3g")
-
 [node name="Sun" parent="background" unique_id=36102581 instance=ExtResource("8_vwiw6")]
 position = Vector2(1, -327)
-rotation = -0.19900791
+rotation = 0.50832665
 scale = Vector2(0.99999994, 0.99999994)
 radius = 300.0
 mass = 1800.0
@@ -121,7 +114,7 @@ orbit_radius = 400.0
 
 [node name="Planet" parent="background" unique_id=1511852575 instance=ExtResource("5_e1qjp")]
 position = Vector2(785, -338)
-rotation = -954.1896
+rotation = -952.95526
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
@@ -147,6 +140,7 @@ speed = 50.0
 [node name="Camera2D" type="Camera2D" parent="." unique_id=317281565]
 
 [node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("11_e1qjp")]
+position = Vector2(2, 0)
 
 [node name="Back" type="Button" parent="." unique_id=195087291]
 anchors_preset = -1
