@@ -90,9 +90,9 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -679.17645
+offset_left = -681.17645
 offset_top = -1858.6
-offset_right = -429.17645
+offset_right = -431.17645
 offset_bottom = -1758.6
 theme = ExtResource("2_iywne")
 text = "About Us"
@@ -112,7 +112,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1473.9857
+rotation = -1481.7439
 SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
@@ -125,7 +125,7 @@ texture = ExtResource("3_lbhrr")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -128.40836
+rotation = -135.39072
 SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
