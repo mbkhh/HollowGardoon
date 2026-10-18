@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/story_opening.gd" id="1_intro"]
+[ext_resource type="FontFile" path="res://assets/fonts/فونت سرباز.ttf" id="2_persian"]
+
+[sub_resource type="StyleBoxFlat" id="Style_card"]
+bg_color = Color(0.025, 0.038, 0.07, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.47, 0.63, 0.77, 0.32)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="FontVariation" id="Font_emphasis"]
+base_font = ExtResource("2_persian")
+variation_embolden = 0.7
+
+[node name="StoryOpening" type="Node2D"]
+process_mode = 3
+position = Vector2(-1152, 326)
+z_index = 100
+script = ExtResource("1_intro")
+
+[node name="IntroCamera" type="Camera2D" parent="."]
+
+[node name="Card" type="PanelContainer" parent="."]
+offset_left = -484.0
+offset_top = -300.0
+offset_right = 484.0
+offset_bottom = 300.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("Style_card")
+
+[node name="Margin" type="MarginContainer" parent="Card"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 42
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 42
+theme_override_constants/margin_bottom = 22
+
+[node name="Content" type="VBoxContainer" parent="Card/Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Story" type="RichTextLabel" parent="Card/Margin/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+text_direction = 2
+language = "fa"
+theme_override_colors/default_color = Color(0.91, 0.94, 0.97, 1)
+theme_override_fonts/normal_font = ExtResource("2_persian")
+theme_override_fonts/bold_font = SubResource("Font_emphasis")
+theme_override_font_sizes/normal_font_size = 26
+theme_override_font_sizes/bold_font_size = 26
+theme_override_constants/line_separation = 4
+theme_override_constants/paragraph_separation = 4
+bbcode_enabled = true
+scroll_active = false
+horizontal_alignment = 0
+vertical_alignment = 1
+
+[node name="Prompt" type="Label" parent="Card/Margin/Content"]
+layout_mode = 2
+mouse_filter = 2
+text_direction = 2
+language = "fa"
+theme_override_colors/font_color = Color(0.59, 0.75, 0.86, 1)
+theme_override_fonts/font = ExtResource("2_persian")
+theme_override_font_sizes/font_size = 22
+text = "برای آغاز سفر، کلید فاصله را فشار دهید."
+horizontal_alignment = 1
+
+[node name="SpaceKey" type="Label" parent="Card/Margin/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.59, 0.75, 0.86, 1)
+theme_override_font_sizes/font_size = 14
+text = "[ SPACE ]"
+horizontal_alignment = 1
