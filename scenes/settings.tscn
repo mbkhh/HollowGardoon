@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="7_83j8s"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="9_4ppmf"]
 [ext_resource type="Texture2D" uid="uid://bnue7h051c7e1" path="res://assets/sprites/Assets/UI/MusicSymbol.png" id="9_am25x"]
+[ext_resource type="Texture2D" uid="uid://bi8qjd2p36ki1" path="res://assets/sprites/Assets/UI/FrameSettings.png" id="10_uhhto"]
+[ext_resource type="Texture2D" uid="uid://d0kk8ijejsf7t" path="res://assets/sprites/Assets/UI/SoundSymbol.png" id="11_1g033"]
 
 [sub_resource type="Curve2D" id="Curve2D_1g033"]
 bake_interval = 303.66
@@ -30,18 +32,19 @@ texture = ExtResource("7_83j8s")
 script = ExtResource("1_gjs24")
 
 [node name="MusicSlider" type="HSlider" parent="." unique_id=1977583117]
-offset_left = -294.0
-offset_top = -142.0
-offset_right = 203.0
-offset_bottom = -88.0
+offset_left = -158.0
+offset_top = -134.0
+offset_right = 339.0
+offset_bottom = -80.0
 max_value = 1.0
 step = 0.01
+metadata/_edit_use_anchors_ = true
 
 [node name="SfxSlider" type="HSlider" parent="." unique_id=2012426657]
-offset_left = -294.0
-offset_top = -45.0
-offset_right = 203.0
-offset_bottom = 9.0
+offset_left = -142.0
+offset_top = 51.0
+offset_right = 355.0
+offset_bottom = 105.0
 max_value = 1.0
 step = 0.01
 
@@ -60,8 +63,8 @@ scale = Vector2(0.7, 0.55)
 texture = ExtResource("2_83j8s")
 
 [node name="Planet2" parent="background" unique_id=423020146 instance=ExtResource("3_gjs24")]
-position = Vector2(-425, 164)
-rotation = -824.9398
+position = Vector2(-470, 227.00002)
+rotation = -748.79474
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -73,8 +76,8 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_am25x")
 
 [node name="Planet" parent="background" unique_id=140036638 instance=ExtResource("3_gjs24")]
-position = Vector2(336, -96.99999)
-rotation = -974.1908
+position = Vector2(476.99997, -202.99998)
+rotation = -104.63752
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
@@ -120,8 +123,17 @@ text = "
 "
 
 [node name="MusicSymbol" type="Sprite2D" parent="." unique_id=1491587958]
-position = Vector2(-403, -123)
+position = Vector2(-251, -95)
 texture = ExtResource("9_am25x")
+
+[node name="FrameSettings" type="Sprite2D" parent="." unique_id=1440780108]
+z_index = -1
+position = Vector2(23, -8)
+texture = ExtResource("10_uhhto")
+
+[node name="SoundSymbol" type="Sprite2D" parent="." unique_id=2031040095]
+position = Vector2(-242, 74)
+texture = ExtResource("11_1g033")
 
 [connection signal="changed" from="MusicSlider" to="." method="_on_music_slider_changed"]
 [connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
