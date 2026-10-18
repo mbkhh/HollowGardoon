@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="3_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_gee14"]
-[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="7_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="11_kvpfn"]
@@ -68,7 +67,7 @@ text = "Exit"
 
 [node name="Setting" type="Button" parent="Buttons" unique_id=220760008]
 offset_left = 413.0
-offset_top = 186.0
+offset_top = 177.0
 offset_right = 539.0
 offset_bottom = 296.0
 pivot_offset = Vector2(58, 50)
@@ -121,7 +120,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1455.8802
+rotation = -1463.3894
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -132,15 +131,9 @@ position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_lbhrr")
 
-[node name="Background1" type="Sprite2D" parent="background" unique_id=1921871531]
-z_index = 10
-position = Vector2(1, -14.000002)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("4_iywne")
-
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -112.18698
+rotation = -118.91393
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
