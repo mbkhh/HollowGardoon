@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="10_j85eu"]
 [ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="11_4p1o3"]
 [ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="11_vtd0g"]
-[ext_resource type="PackedScene" path="res://scenes/Levels/story_opening.tscn" id="16_story_opening"]
+[ext_resource type="PackedScene" uid="uid://clt5o0j2kb6vh" path="res://scenes/Levels/story_opening.tscn" id="16_story_opening"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvd7i"]
 normal = Vector2(0, 1)
@@ -54,7 +54,7 @@ position = Vector2(231, 448)
 
 [node name="Planet8" parent="goal planet" unique_id=1634106500 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1856.0001, 366.99994)
-rotation = 396.38922
+rotation = 395.4615
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet01"
@@ -66,7 +66,7 @@ orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=583936029 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(332, 451.99997)
-rotation = -1395.8977
+rotation = -1396.4915
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -74,7 +74,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1820529494 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1354, 382)
-rotation = -2036.5898
+rotation = -2039.1133
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -83,7 +83,7 @@ orbit_radius = 137.5
 
 [node name="Planet9" parent="planets" unique_id=1434569353 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(8297, 806)
-rotation = -277.43143
+rotation = -275.66873
 SelectedType = "planet02"
 radius = 60.0
 mass = 36.0
@@ -91,7 +91,7 @@ orbit_radius = 100.0
 
 [node name="Planet14" parent="planets" unique_id=1859049650 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(816.0001, 392.0001)
-rotation = -1420.3182
+rotation = -1417.4237
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet04"
 
@@ -183,7 +183,7 @@ offset_right = 514.0
 offset_bottom = 186.0
 theme_override_fonts/font = ExtResource("11_vtd0g")
 theme_override_font_sizes/font_size = 32
-text = " پیامی برای آخرین امید:"
+text = " پیامی برای تو:"
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="Tutorials" unique_id=340737318]
@@ -208,7 +208,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="Sun" parent="." unique_id=304985471 groups=["planets"] instance=ExtResource("8_hk2jt")]
 position = Vector2(2438, 369.99994)
-rotation = -172.67557
+rotation = -173.34354
 
 [node name="StoryOpening" parent="." unique_id=1321478584 instance=ExtResource("16_story_opening")]
 

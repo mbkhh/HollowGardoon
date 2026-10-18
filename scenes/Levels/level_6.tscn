@@ -67,7 +67,7 @@ position = Vector2(1096, 327)
 
 [node name="Planet8" parent="goal planet" unique_id=2025997244 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(2607, 648.00006)
-rotation = -64.45367
+rotation = -27.329365
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -95,7 +95,7 @@ gravity_strength_factor = 0.0
 
 [node name="Planet2" parent="planets" unique_id=1056414193 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(-3135, 582)
-rotation = -552.3517
+rotation = -529.1676
 SelectedType = "planet08"
 radius = 60.0
 mass = 36.0
@@ -103,14 +103,14 @@ orbit_radius = 100.0
 
 [node name="Planet4" parent="planets" unique_id=1875312336 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(1022, 400.99997)
-rotation = -505.70804
+rotation = -467.8959
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=62435373 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(406, 173)
-rotation = 346.17783
+rotation = 339.2778
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -118,7 +118,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=528718187 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(1521, 163.99997)
-rotation = -198.93379
+rotation = -215.35585
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -127,7 +127,7 @@ orbit_radius = 137.5
 
 [node name="Planet14" parent="planets" unique_id=1155878812 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(2186.0002, 205.00006)
-rotation = -222.93613
+rotation = -252.19223
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet01"
 radius = 90.0
@@ -136,7 +136,7 @@ orbit_radius = 137.5
 
 [node name="Planet3" parent="planets" unique_id=825696298 groups=["planets"] instance=ExtResource("8_81l3u")]
 position = Vector2(-3921, 684.0001)
-rotation = -586.38745
+rotation = -567.6194
 SelectedType = "planet08"
 radius = 60.0
 mass = 36.0
@@ -146,13 +146,13 @@ orbit_radius = 100.0
 
 [node name="Sun" parent="suns" unique_id=186164251 groups=["planets"] instance=ExtResource("10_e6xcx")]
 position = Vector2(1741.9999, 697)
-rotation = -403.71985
+rotation = -363.4237
 density = 0.015
 mass = 150.0
 
 [node name="Sun2" parent="suns" unique_id=1387228649 groups=["planets"] instance=ExtResource("10_e6xcx")]
 position = Vector2(-1582.0001, 437.00003)
-rotation = -677.4999
+rotation = -641.61975
 radius = 350.0
 density = 0.015
 mass = 1837.5
@@ -160,7 +160,7 @@ orbit_radius = 462.5
 
 [node name="Sun3" parent="suns" unique_id=1720334512 groups=["planets"] instance=ExtResource("10_e6xcx")]
 position = Vector2(-3508.0002, 380)
-rotation = -520.96814
+rotation = -528.14417
 density = 0.015
 mass = 150.0
 
@@ -228,16 +228,15 @@ offset_bottom = 321.0
 
 [node name="Label4" type="Label" parent="." unique_id=346561575]
 z_index = 3
-offset_left = 1871.0
-offset_top = 371.0
-offset_right = 2614.0
-offset_bottom = 634.0
+offset_left = 1642.0
+offset_top = 683.0
+offset_right = 2385.0
+offset_bottom = 946.0
 theme_override_fonts/font = ExtResource("17_vfvpd")
 theme_override_font_sizes/font_size = 28
-text = "خورشیدها هنوز می‌درخشند، اما دیگر هیچ گرمایی به جهان نمی‌بخشند.
-
-آن‌ها فقط می‌کشند، می‌بلعند و خاموشی را گسترش می‌دهند.
-
-پس چرا سیگنال از جایی نزدیک یکی از آن‌ها می‌آید؟"
+text = "ستاره‌ها هم مثل ما قربانی‌اند.
+و ما را نیز برای سیاهی قربانی می‌کنند،
+با آن خیال واهی که روزگاری، روشنایی خود را باز می‌یابند."
+horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]
