@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ea7p22q0f38d"]
 
 [ext_resource type="Script" uid="uid://ci2t2j5auadgy" path="res://scripts/sun.gd" id="1_bldv3"]
-[ext_resource type="Texture2D" uid="uid://dxtcxfywiiq67" path="res://assets/sprites/Assets/Planets/Sun1.png" id="2_jstgs"]
+[ext_resource type="Texture2D" uid="uid://cmqaabtxwd7ae" path="res://assets/sprites/Assets/Planets/Sun.png" id="2_jstgs"]
 [ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="8_w5lwm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jstgs"]
@@ -9,7 +9,7 @@ radius = 100.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lkwxn"]
 atlas = ExtResource("2_jstgs")
-region = Rect2(0, 0, 2048, 2090)
+region = Rect2(0, 0, 396, 404)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_foe20"]
 animations = [{
@@ -29,7 +29,7 @@ radius = 150.0
 radius = 100.0
 
 [node name="Sun" type="StaticBody2D" unique_id=1597103973]
-rotation = -399.56622
+rotation = -465.50232
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_bldv3")
@@ -43,7 +43,7 @@ shape = SubResource("CircleShape2D_jstgs")
 debug_color = Color(0.8376693, 0.20860654, 0.7999173, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=157079735]
-scale = Vector2(0.153, 0.153)
+scale = Vector2(0.51282054, 0.51282054)
 sprite_frames = SubResource("SpriteFrames_foe20")
 animation = &"sun00"
 
