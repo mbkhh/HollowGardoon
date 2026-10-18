@@ -13,6 +13,7 @@ var level_finished := false
 
 @export var level_id: String = "level_1"
 @export_file("*.tscn") var next_level_scene: String   # set this in the editor
+@export var ending_scene: PackedScene # Optional story ending, used by level 15.
 
 
 func _ready() -> void:
@@ -71,6 +72,13 @@ func _on_goal_reached(body: Node2D) -> void:
 
 	# Save result – SaveManager is your autoload
 	SaveManager.set_level_result(level_id, stars_earned)
+
+	if ending_scene:
+		var ending := ending_scene.instantiate()
+		ending.name = "StoryEnding"
+		# Goal signals originate in physics; add the UI once that step finishes.
+		call_deferred("add_child", ending)
+		return
 
 	# Go to next level (no intermediate screen)
 	var xp_gained: int = stars_earned * 10

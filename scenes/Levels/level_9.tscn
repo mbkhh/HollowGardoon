@@ -1,9 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://c8glnkuulutt3"]
+[gd_scene format=3 uid="uid://c8glnkuulutt3"]
 
 [ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_cu4hb"]
 [ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_pcff6"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_a587u"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_6eb7w"]
 [ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="5_tx31j"]
 [ext_resource type="PackedScene" uid="uid://ofctocr5ms4d" path="res://scenes/follow_camera_2d.tscn" id="6_wg53a"]
 [ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="7_7oa62"]
@@ -24,66 +22,50 @@ normal = Vector2(0, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohlwr"]
 texture = ExtResource("15_nkdwl")
 
-[node name="temp_Level_M" type="Node2D"]
+[node name="temp_Level_M" type="Node2D" unique_id=112185654]
 script = ExtResource("1_cu4hb")
 level_id = "level_9"
 next_level_scene = "uid://dfre8t04h4edy"
 metadata/_edit_horizontal_guides_ = [2048.0, 1297.0, 864.0, 1650.0]
 metadata/_edit_vertical_guides_ = [1534.0]
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_pcff6")]
+[node name="ParallaxBackground" parent="." unique_id=266980294 instance=ExtResource("2_pcff6")]
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=611544452]
 motion_mirroring = Vector2(2304, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(576, 702)
-texture = ExtResource("3_a587u")
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(1728, 702)
-texture = ExtResource("3_a587u")
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1766885353]
 motion_mirroring = Vector2(2304, 0)
 
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(576, 162)
-texture = ExtResource("4_6eb7w")
+[node name="killNodes" type="Node" parent="." unique_id=1927230757]
 
-[node name="BackgroundC3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(1728, 162)
-texture = ExtResource("4_6eb7w")
-
-[node name="killNodes" type="Node" parent="."]
-
-[node name="killzone" parent="killNodes" instance=ExtResource("5_tx31j")]
+[node name="killzone" parent="killNodes" unique_id=246428661 instance=ExtResource("5_tx31j")]
 position = Vector2(478, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone" unique_id=1240020890]
 shape = SubResource("WorldBoundaryShape2D_hvd7i")
 
-[node name="killzone3" parent="killNodes" instance=ExtResource("5_tx31j")]
+[node name="killzone3" parent="killNodes" unique_id=315026542 instance=ExtResource("5_tx31j")]
 position = Vector2(337, 647)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone3" unique_id=2142624400]
 position = Vector2(61, 218)
 shape = SubResource("WorldBoundaryShape2D_wqj8e")
 
-[node name="FollowCamera2D" parent="." instance=ExtResource("6_wg53a")]
+[node name="FollowCamera2D" parent="." unique_id=1996412478 instance=ExtResource("6_wg53a")]
 position = Vector2(768, 432)
 zoom = Vector2(0.75, 0.75)
 target_path = NodePath("../Rocket")
 max_x = 100000.0
 
-[node name="Rocket" parent="." groups=["rocket"] instance=ExtResource("7_7oa62")]
+[node name="Rocket" parent="." unique_id=1913149033 groups=["rocket"] instance=ExtResource("7_7oa62")]
 position = Vector2(769, 495)
 
-[node name="goal planet" type="Node" parent="."]
+[node name="goal planet" type="Node" parent="." unique_id=63410725]
 
-[node name="Planet8" parent="goal planet" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet8" parent="goal planet" unique_id=1228751431 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(4073, 672.00006)
-rotation = -46.8796
+rotation = -47.84101
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -91,103 +73,103 @@ radius = 90.0
 mass = 81.0
 orbit_radius = 137.5
 
-[node name="wormwholes" type="Node" parent="."]
+[node name="wormwholes" type="Node" parent="." unique_id=1872124010]
 
-[node name="Whitehole" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("9_muvoo")]
+[node name="Whitehole" parent="wormwholes" unique_id=1279334022 node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("9_muvoo")]
 position = Vector2(3098, 655.9999)
 rotation = -0.36064684
 linked_whitehole = NodePath("../Whitehole2")
 radius = 100.0
 gravity_strength_factor = 0.0
 
-[node name="Whitehole2" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("9_muvoo")]
+[node name="Whitehole2" parent="wormwholes" unique_id=845574340 node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("9_muvoo")]
 position = Vector2(2508, 260)
 rotation = -0.36064684
 linked_whitehole = NodePath("../Whitehole")
 radius = 100.0
 gravity_strength_factor = 0.0
 
-[node name="planets" type="Node" parent="."]
+[node name="planets" type="Node" parent="." unique_id=200815153]
 
-[node name="Planet2" parent="planets" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet2" parent="planets" unique_id=905833601 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(2827, 407)
-rotation = -640.96515
+rotation = -641.355
 SelectedType = "planet08"
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
-[node name="Planet4" parent="planets" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet4" parent="planets" unique_id=2060239597 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(1280.0001, 135.99995)
-rotation = -316.40808
+rotation = -315.66644
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
-[node name="Planet6" parent="planets" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet6" parent="planets" unique_id=1696923481 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(669.00006, 480)
-rotation = 262.51035
+rotation = 263.56616
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
-[node name="Planet7" parent="planets" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet7" parent="planets" unique_id=1119490792 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(1925, 391.99988)
-rotation = -122.800255
+rotation = -123.891945
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
 mass = 81.0
 orbit_radius = 137.5
 
-[node name="Planet14" parent="planets" groups=["planets"] instance=ExtResource("8_5mw1v")]
+[node name="Planet14" parent="planets" unique_id=938272518 groups=["planets"] instance=ExtResource("8_5mw1v")]
 position = Vector2(3497.0002, 471)
-rotation = -260.34042
+rotation = -259.7267
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet01"
 radius = 90.0
 mass = 81.0
 orbit_radius = 137.5
 
-[node name="suns" type="Node" parent="."]
+[node name="suns" type="Node" parent="." unique_id=1971849096]
 
-[node name="Sun" parent="suns" groups=["planets"] instance=ExtResource("10_ibirn")]
+[node name="Sun" parent="suns" unique_id=2025050367 groups=["planets"] instance=ExtResource("10_ibirn")]
 position = Vector2(2501.9998, 636)
-rotation = -488.94586
+rotation = -488.59097
 density = 0.015
 mass = 150.0
 
-[node name="Sun2" parent="suns" groups=["planets"] instance=ExtResource("10_ibirn")]
+[node name="Sun2" parent="suns" unique_id=2023530622 groups=["planets"] instance=ExtResource("10_ibirn")]
 position = Vector2(1293.0001, 864.99994)
-rotation = -742.8364
+rotation = -743.55115
 radius = 350.0
 density = 0.015
 mass = 1837.5
 orbit_radius = 462.5
 
-[node name="Stars" type="Node" parent="."]
+[node name="Stars" type="Node" parent="." unique_id=1900406333]
 
-[node name="star" parent="Stars" groups=["stars"] instance=ExtResource("11_x0qgr")]
+[node name="star" parent="Stars" unique_id=119265266 groups=["stars"] instance=ExtResource("11_x0qgr")]
 position = Vector2(1610, 293)
 
-[node name="star2" parent="Stars" groups=["stars"] instance=ExtResource("11_x0qgr")]
+[node name="star2" parent="Stars" unique_id=743183135 groups=["stars"] instance=ExtResource("11_x0qgr")]
 position = Vector2(2916, 472)
 star_index = 2
 
-[node name="star3" parent="Stars" groups=["stars"] instance=ExtResource("11_x0qgr")]
+[node name="star3" parent="Stars" unique_id=1950609445 groups=["stars"] instance=ExtResource("11_x0qgr")]
 position = Vector2(1063, 190)
 star_index = 1
 
-[node name="Asteroids" type="Node" parent="."]
+[node name="Asteroids" type="Node" parent="." unique_id=278187843]
 
-[node name="moons" type="Node" parent="."]
+[node name="moons" type="Node" parent="." unique_id=867636765]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=957866796]
 offset = Vector2(576, 324)
 transform = Transform2D(1, 0, 0, 1, 576, 324)
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_0cxnh")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=746219403 instance=ExtResource("13_0cxnh")]
 visible = false
 z_index = 8
 offset_left = -574.0
@@ -195,7 +177,7 @@ offset_top = -321.0
 offset_right = 575.0
 offset_bottom = 322.0
 
-[node name="StarHUD" parent="CanvasLayer" instance=ExtResource("14_ms25r")]
+[node name="StarHUD" parent="CanvasLayer" unique_id=2102294972 instance=ExtResource("14_ms25r")]
 z_index = 4
 offset_left = -516.0
 offset_top = -276.0
@@ -203,7 +185,7 @@ offset_right = -476.0
 offset_bottom = -236.0
 metadata/_edit_use_anchors_ = true
 
-[node name="PuaseBtn" type="Button" parent="CanvasLayer"]
+[node name="PuaseBtn" type="Button" parent="CanvasLayer" unique_id=775942587]
 offset_left = 417.0
 offset_top = -292.0
 offset_right = 537.0
@@ -216,7 +198,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_ohlwr")
 theme_override_styles/focus = SubResource("StyleBoxTexture_ohlwr")
 metadata/_edit_use_anchors_ = true
 
-[node name="LevelComplete" parent="CanvasLayer" instance=ExtResource("16_80w2p")]
+[node name="LevelComplete" parent="CanvasLayer" unique_id=1102070259 instance=ExtResource("16_80w2p")]
 visible = false
 z_index = 8
 offset_left = -576.0

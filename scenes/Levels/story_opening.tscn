@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene format=3 uid="uid://clt5o0j2kb6vh"]
 
-[ext_resource type="Script" path="res://scripts/story_opening.gd" id="1_intro"]
-[ext_resource type="FontFile" path="res://assets/fonts/فونت سرباز.ttf" id="2_persian"]
+[ext_resource type="Script" uid="uid://mlrg4snendeg" path="res://scripts/story_opening.gd" id="1_intro"]
+[ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="2_persian"]
 
 [sub_resource type="StyleBoxFlat" id="Style_card"]
 bg_color = Color(0.025, 0.038, 0.07, 0.88)
@@ -19,15 +19,22 @@ corner_radius_bottom_left = 12
 base_font = ExtResource("2_persian")
 variation_embolden = 0.7
 
-[node name="StoryOpening" type="Node2D"]
+[node name="StoryOpening" type="Node2D" unique_id=632412511]
 process_mode = 3
-position = Vector2(-1152, 326)
 z_index = 100
+position = Vector2(-1152, 326)
 script = ExtResource("1_intro")
+story_text = "[font_size=32]برای آخرین امید
+[/font_size]
 
-[node name="IntroCamera" type="Camera2D" parent="."]
+هنوز به سال نرسیده است، زمانی که خانه من و تو قابل سکونت بود.
 
-[node name="Card" type="PanelContainer" parent="."]
+به تو میسپارم یادگارم را، سفینه‌ای که از دوران جنگ برایم یادگار مانده،
+و به تو می‌سپارم امیدم را، و یادم را، تا شاید، گوشه‌ای دیگر از جهان چیزی از من به یادگار بماند."
+
+[node name="IntroCamera" type="Camera2D" parent="." unique_id=127913433]
+
+[node name="Card" type="PanelContainer" parent="." unique_id=1085793332]
 offset_left = -484.0
 offset_top = -300.0
 offset_right = 484.0
@@ -35,7 +42,7 @@ offset_bottom = 300.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("Style_card")
 
-[node name="Margin" type="MarginContainer" parent="Card"]
+[node name="Margin" type="MarginContainer" parent="Card" unique_id=97134102]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 42
@@ -43,43 +50,40 @@ theme_override_constants/margin_top = 22
 theme_override_constants/margin_right = 42
 theme_override_constants/margin_bottom = 22
 
-[node name="Content" type="VBoxContainer" parent="Card/Margin"]
+[node name="Content" type="VBoxContainer" parent="Card/Margin" unique_id=1559196398]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 12
 
-[node name="Story" type="RichTextLabel" parent="Card/Margin/Content"]
+[node name="Story" type="RichTextLabel" parent="Card/Margin/Content" unique_id=975285542]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
-text_direction = 2
-language = "fa"
 theme_override_colors/default_color = Color(0.91, 0.94, 0.97, 1)
+theme_override_constants/line_separation = 4
+theme_override_constants/paragraph_separation = 4
 theme_override_fonts/normal_font = ExtResource("2_persian")
 theme_override_fonts/bold_font = SubResource("Font_emphasis")
 theme_override_font_sizes/normal_font_size = 26
 theme_override_font_sizes/bold_font_size = 26
-theme_override_constants/line_separation = 4
-theme_override_constants/paragraph_separation = 4
 bbcode_enabled = true
 scroll_active = false
-horizontal_alignment = 0
 vertical_alignment = 1
-
-[node name="Prompt" type="Label" parent="Card/Margin/Content"]
-layout_mode = 2
-mouse_filter = 2
 text_direction = 2
 language = "fa"
+
+[node name="Prompt" type="Label" parent="Card/Margin/Content" unique_id=1082507039]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.59, 0.75, 0.86, 1)
 theme_override_fonts/font = ExtResource("2_persian")
 theme_override_font_sizes/font_size = 22
 text = "برای آغاز سفر، کلید فاصله را فشار دهید."
 horizontal_alignment = 1
+text_direction = 2
+language = "fa"
 
-[node name="SpaceKey" type="Label" parent="Card/Margin/Content"]
+[node name="SpaceKey" type="Label" parent="Card/Margin/Content" unique_id=1262364606]
 layout_mode = 2
-mouse_filter = 2
 theme_override_colors/font_color = Color(0.59, 0.75, 0.86, 1)
 theme_override_font_sizes/font_size = 14
 text = "[ SPACE ]"

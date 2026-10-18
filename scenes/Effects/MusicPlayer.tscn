@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cf7qxd66cx3yd"]
+[gd_scene format=3 uid="uid://cf7qxd66cx3yd"]
 
-[ext_resource type="AudioStream" uid="uid://cnsd6ukihog1m" path="res://assets/musics/[UNOFFICIAL] Earthbound (1).mp3" id="1_ta4dt"]
+[ext_resource type="AudioStream" uid="uid://c5nkq5vnv7bvc" path="res://assets/musics/creepy_industrial_ambience.mp3" id="1_5v7cp"]
 
-[node name="MusicPlayer" type="AudioStreamPlayer"]
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=1910195199]
 process_mode = 3
-stream = ExtResource("1_ta4dt")
+stream = ExtResource("1_5v7cp")
 autoplay = true
 bus = &"Music"

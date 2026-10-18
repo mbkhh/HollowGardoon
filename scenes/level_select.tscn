@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="5_htctk"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="5_o2xx4"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="10_o2xx4"]
+[ext_resource type="FontFile" path="res://assets/fonts/Century Gothic/centurygothic_bold.ttf" id="11_judge_font"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htctk"]
 texture = ExtResource("10_o2xx4")
@@ -115,5 +116,24 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_htctk")
 theme_override_styles/focus = SubResource("StyleBoxTexture_htctk")
 text = "
 "
+
+[node name="JudgeBanner" type="CanvasLayer" parent="."]
+layer = 20
+visible = false
+
+[node name="Label" type="Label" parent="JudgeBanner"]
+anchors_preset = 10
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 8.0
+offset_right = 360.0
+offset_bottom = 36.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.76, 0.88, 1, 1)
+theme_override_fonts/font = ExtResource("11_judge_font")
+theme_override_font_sizes/font_size = 16
+text = "GAME JAM JUDGE MODE - All 15 levels unlocked"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

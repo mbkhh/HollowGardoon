@@ -55,6 +55,7 @@ offset_top = -108.0
 offset_right = 69.0
 offset_bottom = -70.0
 theme = ExtResource("2_5i3i6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_5i3i6")
 text = "Team PixL:"
 metadata/_edit_use_anchors_ = true
@@ -66,6 +67,7 @@ offset_top = 52.0
 offset_right = 146.0
 offset_bottom = 213.0
 theme = SubResource("Theme_vwiw6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_5i3i6")
 text = "محمد باقر خندان
 فرزان ابراهیمی
@@ -80,6 +82,7 @@ offset_top = -262.0
 offset_right = 56.0
 offset_bottom = -222.0
 theme = ExtResource("2_5i3i6")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "about us"
 metadata/_edit_use_anchors_ = true
 
@@ -106,7 +109,7 @@ texture = ExtResource("6_1bhnm")
 
 [node name="Sun" parent="background" unique_id=36102581 instance=ExtResource("8_vwiw6")]
 position = Vector2(1, -327)
-rotation = 0.50832665
+rotation = -7.509249
 scale = Vector2(0.99999994, 0.99999994)
 radius = 300.0
 mass = 1800.0
@@ -114,7 +117,7 @@ orbit_radius = 400.0
 
 [node name="Planet" parent="background" unique_id=1511852575 instance=ExtResource("5_e1qjp")]
 position = Vector2(785, -338)
-rotation = -952.95526
+rotation = -927.50214
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
@@ -188,7 +191,7 @@ offset_top = 237.0
 offset_right = 229.0
 offset_bottom = 409.0
 rotation = -1.5707964
-theme_override_colors/default_color = Color(0.11764706, 0.3764706, 0.5568628, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("3_5i3i6")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true

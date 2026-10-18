@@ -1,9 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4tis3lkn2ksg"]
+[gd_scene format=3 uid="uid://c4tis3lkn2ksg"]
 
 [ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_r00u7"]
 [ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_2vp10"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_0b27f"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_k0n5u"]
 [ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="4_lpoy4"]
 [ext_resource type="PackedScene" uid="uid://chiwt2btq2p2c" path="res://scenes/Planets/whitehole.tscn" id="5_3bqyq"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="5_p3qha"]
@@ -31,55 +29,47 @@ point_count = 3
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pho0"]
 texture = ExtResource("13_vujtu")
 
-[node name="level4" type="Node2D"]
+[node name="level4" type="Node2D" unique_id=228519419]
 script = ExtResource("1_r00u7")
 level_id = "level_4"
 next_level_scene = "uid://dlj54s6gkpm6t"
 metadata/_edit_horizontal_guides_ = [2048.0, 648.0, 1297.0, 984.0, 1650.0, 595.0]
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_2vp10")]
+[node name="ParallaxBackground" parent="." unique_id=1947494103 instance=ExtResource("2_2vp10")]
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1008780060]
 motion_mirroring = Vector2(1152, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2(576, 486)
-texture = ExtResource("3_0b27f")
-
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=208553209]
 motion_mirroring = Vector2(1152, 0)
 
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
-position = Vector2(576, 162)
-texture = ExtResource("4_k0n5u")
+[node name="killNodes" type="Node" parent="." unique_id=1041469788]
 
-[node name="killNodes" type="Node" parent="."]
-
-[node name="killzone" parent="killNodes" instance=ExtResource("6_jj8o0")]
+[node name="killzone" parent="killNodes" unique_id=1157167161 instance=ExtResource("6_jj8o0")]
 position = Vector2(478, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone" unique_id=1762577181]
 shape = SubResource("WorldBoundaryShape2D_woy8g")
 
-[node name="killzone3" parent="killNodes" instance=ExtResource("6_jj8o0")]
+[node name="killzone3" parent="killNodes" unique_id=1185792384 instance=ExtResource("6_jj8o0")]
 position = Vector2(337, 647)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone3" unique_id=1796760948]
 shape = SubResource("WorldBoundaryShape2D_mndr2")
 
-[node name="FollowCamera2D" parent="." instance=ExtResource("8_0b27f")]
+[node name="FollowCamera2D" parent="." unique_id=843356151 instance=ExtResource("8_0b27f")]
 position = Vector2(576, 324)
 target_path = NodePath("../Rocket")
 max_x = 100000.0
 
-[node name="Rocket" parent="." groups=["rocket"] instance=ExtResource("4_lpoy4")]
+[node name="Rocket" parent="." unique_id=1044508221 groups=["rocket"] instance=ExtResource("4_lpoy4")]
 position = Vector2(612, 354)
 
-[node name="goal planet" type="Node" parent="."]
+[node name="goal planet" type="Node" parent="." unique_id=1248992988]
 
-[node name="Planet8" parent="goal planet" groups=["planets"] instance=ExtResource("5_p3qha")]
-position = Vector2(2952.0002, 438.99997)
-rotation = 196.6883
+[node name="Planet8" parent="goal planet" unique_id=783388378 groups=["planets"] instance=ExtResource("5_p3qha")]
+position = Vector2(3115, 408.00006)
+rotation = 161.95288
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -87,61 +77,61 @@ radius = 90.0
 mass = 81.0
 orbit_radius = 137.5
 
-[node name="planets" type="Node" parent="."]
+[node name="planets" type="Node" parent="." unique_id=1552002999]
 
-[node name="Planet4" parent="planets" groups=["planets"] instance=ExtResource("5_p3qha")]
+[node name="Planet4" parent="planets" unique_id=1029304690 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(2593, 223)
-rotation = 1777.52
+rotation = 1771.4404
 SelectedType = "planet03"
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
-[node name="Planet6" parent="planets" groups=["planets"] instance=ExtResource("5_p3qha")]
+[node name="Planet6" parent="planets" unique_id=811109282 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(1061, 278)
-rotation = -1900.4354
+rotation = -1901.0422
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
 orbit_radius = 100.0
 
-[node name="Planet7" parent="planets" groups=["planets"] instance=ExtResource("5_p3qha")]
+[node name="Planet7" parent="planets" unique_id=512885841 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(513, 212)
-rotation = -2568.4875
+rotation = -2580.5398
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
 mass = 81.0
 orbit_radius = 137.5
 
-[node name="Stars" type="Node" parent="."]
+[node name="Stars" type="Node" parent="." unique_id=1484454680]
 
-[node name="star" parent="Stars" groups=["stars"] instance=ExtResource("7_2vp10")]
+[node name="star" parent="Stars" unique_id=1227672556 groups=["stars"] instance=ExtResource("7_2vp10")]
 position = Vector2(971, 377)
 
-[node name="star2" parent="Stars" groups=["stars"] instance=ExtResource("7_2vp10")]
+[node name="star2" parent="Stars" unique_id=961570474 groups=["stars"] instance=ExtResource("7_2vp10")]
 position = Vector2(2736, 213)
 star_index = 2
 
-[node name="star3" parent="Stars" groups=["stars"] instance=ExtResource("7_2vp10")]
+[node name="star3" parent="Stars" unique_id=267841556 groups=["stars"] instance=ExtResource("7_2vp10")]
 position = Vector2(1256, 288)
 star_index = 1
 
-[node name="Asteroids" type="Node" parent="."]
+[node name="Asteroids" type="Node" parent="." unique_id=1830883466]
 
-[node name="Path2D" type="Path2D" parent="Asteroids"]
+[node name="Path2D" type="Path2D" parent="Asteroids" unique_id=2060664316]
 position = Vector2(764.8839, 500.25702)
 scale = Vector2(0.4229229, 0.727677)
 curve = SubResource("Curve2D_v4u6s")
 
-[node name="AsteroidMover" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover" parent="Asteroids/Path2D" unique_id=1110800073 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 400.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover2" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover2" parent="Asteroids/Path2D" unique_id=1010641818 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 420.0
@@ -149,7 +139,7 @@ start_delay = 1.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover3" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover3" parent="Asteroids/Path2D" unique_id=329019293 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 400.0
@@ -157,7 +147,7 @@ start_delay = 2.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover4" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover4" parent="Asteroids/Path2D" unique_id=496385169 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(0.99999994, 0.99999994)
@@ -166,7 +156,7 @@ start_delay = 3.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover5" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover5" parent="Asteroids/Path2D" unique_id=1526484984 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(1, 0.9999999)
@@ -175,7 +165,7 @@ start_delay = 4.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover6" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover6" parent="Asteroids/Path2D" unique_id=485445186 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 400.0
@@ -183,7 +173,7 @@ start_delay = 0.5
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover7" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover7" parent="Asteroids/Path2D" unique_id=369407239 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 420.0
@@ -191,7 +181,7 @@ start_delay = 1.5
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover8" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover8" parent="Asteroids/Path2D" unique_id=464586352 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 speed = 400.0
@@ -199,7 +189,7 @@ start_delay = 2.5
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover9" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover9" parent="Asteroids/Path2D" unique_id=634554608 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(0.99999994, 0.99999994)
@@ -208,7 +198,7 @@ start_delay = 3.5
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover10" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover10" parent="Asteroids/Path2D" unique_id=32755636 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(1, 0.9999999)
@@ -217,7 +207,7 @@ start_delay = 4.5
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover11" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover11" parent="Asteroids/Path2D" unique_id=2110796804 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(1, 0.99999994)
@@ -225,7 +215,7 @@ speed = 600.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover12" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover12" parent="Asteroids/Path2D" unique_id=1214363348 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(1, 0.99999994)
@@ -234,7 +224,7 @@ start_delay = 1.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="AsteroidMover13" parent="Asteroids/Path2D" instance=ExtResource("11_lpoy4")]
+[node name="AsteroidMover13" parent="Asteroids/Path2D" unique_id=539702591 instance=ExtResource("11_lpoy4")]
 position = Vector2(2099.9475, -826.2691)
 rotation = 2.1273546
 scale = Vector2(1, 0.99999994)
@@ -243,11 +233,11 @@ start_delay = 2.0
 respawn_delay = 0.0
 radius = 75.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1136323069]
 offset = Vector2(576, 324)
 transform = Transform2D(1, 0, 0, 1, 576, 324)
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_bu5vv")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=1939217603 instance=ExtResource("11_bu5vv")]
 visible = false
 z_index = 8
 offset_left = -574.0
@@ -255,7 +245,7 @@ offset_top = -321.0
 offset_right = 575.0
 offset_bottom = 322.0
 
-[node name="StarHUD" parent="CanvasLayer" instance=ExtResource("9_k0n5u")]
+[node name="StarHUD" parent="CanvasLayer" unique_id=439567800 instance=ExtResource("9_k0n5u")]
 z_index = 4
 offset_left = -516.0
 offset_top = -276.0
@@ -263,7 +253,7 @@ offset_right = -476.0
 offset_bottom = -236.0
 metadata/_edit_use_anchors_ = true
 
-[node name="PuaseBtn" type="Button" parent="CanvasLayer"]
+[node name="PuaseBtn" type="Button" parent="CanvasLayer" unique_id=500492982]
 offset_left = 417.0
 offset_top = -292.0
 offset_right = 537.0
@@ -276,7 +266,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_3pho0")
 theme_override_styles/focus = SubResource("StyleBoxTexture_3pho0")
 metadata/_edit_use_anchors_ = true
 
-[node name="LevelComplete" parent="CanvasLayer" instance=ExtResource("14_1eq62")]
+[node name="LevelComplete" parent="CanvasLayer" unique_id=2131984180 instance=ExtResource("14_1eq62")]
 visible = false
 z_index = 8
 offset_left = -576.0
@@ -284,9 +274,9 @@ offset_top = -322.0
 offset_right = 577.0
 offset_bottom = 321.0
 
-[node name="Tutorials" type="Node" parent="."]
+[node name="Tutorials" type="Node" parent="." unique_id=1181368057]
 
-[node name="Label4" type="Label" parent="Tutorials"]
+[node name="Label4" type="Label" parent="Tutorials" unique_id=394758647]
 z_index = 3
 offset_left = 1293.0
 offset_top = 620.0
@@ -297,20 +287,34 @@ theme_override_fonts/font = ExtResource("15_0b27f")
 theme_override_font_sizes/font_size = 28
 text = "کرم چاله ها می‌تونن تو رو توی فضا و مکان جا به جا کنن!"
 
-[node name="wormwholes" type="Node" parent="."]
+[node name="wormwholes" type="Node" parent="." unique_id=1017851284]
 
-[node name="Whitehole" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("5_3bqyq")]
+[node name="Whitehole" parent="wormwholes" unique_id=968992039 node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("5_3bqyq")]
 position = Vector2(2177, 483)
 rotation = -0.36064684
 linked_whitehole = NodePath("../Whitehole2")
 radius = 100.0
 gravity_strength_factor = 0.0
 
-[node name="Whitehole2" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("5_3bqyq")]
+[node name="Whitehole2" parent="wormwholes" unique_id=299978238 node_paths=PackedStringArray("linked_whitehole") groups=["whiteholes"] instance=ExtResource("5_3bqyq")]
 position = Vector2(1372, 137.00003)
 rotation = -0.36064684
 linked_whitehole = NodePath("../Whitehole")
 radius = 100.0
 gravity_strength_factor = 0.0
+
+[node name="Label5" type="Label" parent="." unique_id=569885861]
+z_index = 3
+offset_left = 2308.0
+offset_top = 364.0
+offset_right = 2963.0
+offset_bottom = 570.0
+theme_override_fonts/font = ExtResource("15_0b27f")
+theme_override_font_sizes/font_size = 28
+text = "
+این پرچم‌ها پیش از خاموشی جهان برپا شده‌اند.
+کسی این مسیر را می‌شناخته...
+کسی می‌دانسته که روزی، مسافری مثل تو به آن نیاز خواهد داشت"
+horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]

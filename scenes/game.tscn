@@ -44,11 +44,24 @@ gravity_strength_factor = 0.0
 
 [node name="Buttons" type="Node" parent="." unique_id=1126781375]
 
+[node name="Shop" type="Button" parent="Buttons" unique_id=562527096]
+anchors_preset = -1
+anchor_left = 0.48366013
+anchor_top = 2.9777777
+anchor_right = 0.48366013
+anchor_bottom = 2.9777777
+offset_left = -524.17645
+offset_top = -1848.6
+offset_right = -274.17645
+offset_bottom = -1748.6
+theme = ExtResource("2_iywne")
+text = "Shop"
+
 [node name="Start" type="Button" parent="Buttons" unique_id=1034794483]
-offset_left = -124.0
-offset_top = -53.0
-offset_right = 126.0
-offset_bottom = 47.0
+offset_left = -272.0
+offset_top = 82.0
+offset_right = -22.0
+offset_bottom = 182.0
 theme = ExtResource("2_iywne")
 text = "Start"
 
@@ -58,10 +71,10 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -676.17645
-offset_top = -1724.6
-offset_right = -426.17645
-offset_bottom = -1624.6
+offset_left = -526.17645
+offset_top = -1726.6
+offset_right = -276.17645
+offset_bottom = -1626.6
 theme = ExtResource("2_iywne")
 text = "Exit"
 
@@ -90,12 +103,37 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -679.17645
-offset_top = -1858.6
-offset_right = -429.17645
-offset_bottom = -1758.6
+offset_left = -830.17645
+offset_top = -1724.6
+offset_right = -580.17645
+offset_bottom = -1624.6
 theme = ExtResource("2_iywne")
 text = "About Us"
+
+[node name="GameJamJudges" type="Button" parent="Buttons" unique_id=1032006537]
+offset_left = 324.0
+offset_top = 35.0
+offset_right = 664.0
+offset_bottom = 147.0
+scale = Vector2(0.64000034, 0.64000034)
+tooltip_text = "For game jam judges: open any level without progression requirements. Earned stars and progress are preserved."
+theme = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 23
+text = "Game Jam Judges
+Unlock All 15 Levels"
+
+[node name="JudgeNote" type="Label" parent="Buttons/GameJamJudges" unique_id=464290342]
+layout_mode = 0
+offset_left = -70.31247
+offset_top = 128.12494
+offset_right = 269.68753
+offset_bottom = 179.12494
+scale = Vector2(1.4354525, 1.4354525)
+theme = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 16
+text = "Judge shortcut: choose any level.
+No progression requirements."
+horizontal_alignment = 1
 
 [node name="background" type="Node2D" parent="." unique_id=1519957681]
 z_index = -4096
@@ -112,7 +150,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1111.6647
+rotation = -1434.4111
 SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
@@ -125,7 +163,7 @@ texture = ExtResource("3_lbhrr")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -611.48285
+rotation = -147.2239
 SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
@@ -167,7 +205,9 @@ stream = ExtResource("11_kvpfn")
 volume_db = 4.838
 bus = &"SFX"
 
+[connection signal="pressed" from="Buttons/Shop" to="." method="_on_shop_pressed"]
 [connection signal="button_down" from="Buttons/Start" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Buttons/Exit" to="." method="_on_button_2_button_down"]
 [connection signal="pressed" from="Buttons/Setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="Buttons/About Us" to="." method="_on_about_us_pressed"]
+[connection signal="pressed" from="Buttons/GameJamJudges" to="." method="_on_game_jam_judges_pressed"]
