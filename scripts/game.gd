@@ -8,6 +8,7 @@ extends Node2D
 
 func _on_button_button_down() -> void:
 	print("hello world!!") # Replace with function body.
+	SaveManager.judge_mode = false
 	
 	get_tree().change_scene_to_file("res://scenes/level_select.tscn")
 
@@ -37,3 +38,7 @@ func _on_setting_pressed() -> void:
 
 func _on_about_us_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/about us.tscn")
+
+func _on_game_jam_judges_pressed() -> void:
+	SaveManager.judge_mode = true
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn")

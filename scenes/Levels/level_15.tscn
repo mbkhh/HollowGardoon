@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="15_i1xfl"]
 [ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="15_pia5d"]
 [ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="16_4vk2t"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/story_ending.tscn" id="17_story_ending"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvd7i"]
 normal = Vector2(0, 1)
@@ -28,6 +29,7 @@ texture = ExtResource("15_i1xfl")
 [node name="temp_Level_M" type="Node2D" unique_id=718508028]
 script = ExtResource("1_p2ncv")
 level_id = "level_15"
+ending_scene = ExtResource("17_story_ending")
 metadata/_edit_horizontal_guides_ = [2048.0, 1297.0, 864.0, 1650.0]
 metadata/_edit_vertical_guides_ = [1534.0]
 

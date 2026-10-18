@@ -97,6 +97,29 @@ offset_bottom = -1758.6
 theme = ExtResource("2_iywne")
 text = "About Us"
 
+[node name="GameJamJudges" type="Button" parent="Buttons"]
+offset_left = 200.0
+offset_top = -30.0
+offset_right = 540.0
+offset_bottom = 82.0
+theme = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 23
+text = "Game Jam Judges
+Unlock All 15 Levels"
+tooltip_text = "For game jam judges: open any level without progression requirements. Earned stars and progress are preserved."
+
+[node name="JudgeNote" type="Label" parent="Buttons"]
+offset_left = 200.0
+offset_top = 94.0
+offset_right = 540.0
+offset_bottom = 145.0
+mouse_filter = 2
+theme = ExtResource("2_iywne")
+theme_override_font_sizes/font_size = 16
+text = "Judge shortcut: choose any level.
+No progression requirements."
+horizontal_alignment = 1
+
 [node name="background" type="Node2D" parent="." unique_id=1519957681]
 z_index = -4096
 
@@ -171,3 +194,4 @@ bus = &"SFX"
 [connection signal="button_down" from="Buttons/Exit" to="." method="_on_button_2_button_down"]
 [connection signal="pressed" from="Buttons/Setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="Buttons/About Us" to="." method="_on_about_us_pressed"]
+[connection signal="pressed" from="Buttons/GameJamJudges" to="." method="_on_game_jam_judges_pressed"]

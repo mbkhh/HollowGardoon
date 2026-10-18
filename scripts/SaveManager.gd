@@ -11,6 +11,10 @@ const ROCKET_TYPES: Array[String] = ["default", "ship1", "ship2", "ship3"]
 var rocket_owned: Dictionary = {}
 var equipped_rocket: String = "default"
 
+# A review shortcut for game jam judges, separate from earned progression.
+# Session-only: never written to the save file.
+var judge_mode: bool = false
+
 func _ready() -> void:
 	print("Save file: "+OS.get_user_data_dir())
 	_init_default_data()
