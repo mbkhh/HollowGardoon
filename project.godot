@@ -31,6 +31,10 @@ WinSfx="*res://scripts/WinSFX.gd"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="PixL"
+
 [input]
 
 reverse={

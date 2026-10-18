@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmywikrxa4aea"]
+[gd_scene format=3 uid="uid://dmywikrxa4aea"]
 
 [ext_resource type="Script" uid="uid://dml7472wcua2x" path="res://scripts/level_select.gd" id="1_3shnc"]
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="2_4nqmc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cofv3pydp16a" path="res://assets/sprites/Assets/UI/StartButtonTextless.png" id="3_ckc44"]
 [ext_resource type="Texture2D" uid="uid://cg1exfrtrg5xp" path="res://assets/sprites/Assets/UI/MoneySymbol_Blue.png" id="3_o2xx4"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="4_ckc44"]
+[ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="5_htctk"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="5_o2xx4"]
 [ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="6_htctk"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="10_o2xx4"]
@@ -14,94 +15,96 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htctk"]
 texture = ExtResource("10_o2xx4")
 
-[node name="LevelSelect" type="Control"]
+[node name="LevelSelect" type="Control" unique_id=572524702]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_3shnc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=899139640]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=777131414]
 layout_mode = 0
 offset_left = -416.0
 offset_top = -290.0
 offset_right = -376.0
 offset_bottom = -207.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=952359635]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=599706360]
 layout_mode = 2
 
-[node name="XPLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="XPLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=193314374]
 layout_mode = 2
 theme = ExtResource("2_7plkq")
 text = "Xp
 "
 
-[node name="MoneySymbolBlue" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel"]
+[node name="MoneySymbolBlue" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel" unique_id=1857791060]
 position = Vector2(-26, 21)
 rotation = -0.20943952
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_o2xx4")
 
-[node name="StartButtonTextless" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel"]
+[node name="StartButtonTextless" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel" unique_id=626144003]
 z_index = -10
 position = Vector2(12, 22)
 scale = Vector2(0.54, 0.394)
 texture = ExtResource("3_ckc44")
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=897650766]
 layout_mode = 2
 columns = 5
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1455710528]
 
-[node name="background" type="Node2D" parent="."]
+[node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("5_htctk")]
+
+[node name="background" type="Node2D" parent="." unique_id=2051330863]
 z_index = -4096
 
-[node name="Background0" type="Sprite2D" parent="background"]
+[node name="Background0" type="Sprite2D" parent="background" unique_id=1289544892]
 position = Vector2(2, -4)
 texture = ExtResource("2_4nqmc")
 
-[node name="Frame" type="Sprite2D" parent="background"]
+[node name="Frame" type="Sprite2D" parent="background" unique_id=934233940]
 visible = false
 position = Vector2(0, 16)
 scale = Vector2(0.7, 0.55)
 texture = ExtResource("3_7plkq")
 
-[node name="Planet2" parent="background" instance=ExtResource("4_ckc44")]
+[node name="Planet2" parent="background" unique_id=687455846 instance=ExtResource("4_ckc44")]
 position = Vector2(-440, -9)
-rotation = -705.0584
+rotation = -709.7752
 SelectedType = "planet04"
 radius = 75.0
 mass = 56.25
 orbit_radius = 118.75
 
-[node name="Background2" type="Sprite2D" parent="background"]
+[node name="Background2" type="Sprite2D" parent="background" unique_id=1796616038]
 position = Vector2(3, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("5_o2xx4")
 
-[node name="Background1" type="Sprite2D" parent="background"]
+[node name="Background1" type="Sprite2D" parent="background" unique_id=1802592442]
 z_index = 10
 position = Vector2(1, -14.000002)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("6_htctk")
 
-[node name="Planet" parent="background" instance=ExtResource("4_ckc44")]
+[node name="Planet" parent="background" unique_id=96890017 instance=ExtResource("4_ckc44")]
 position = Vector2(463.99997, 141.00003)
-rotation = -141.46841
+rotation = -143.07507
 SelectedType = "planet09"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="Button" parent="." unique_id=1985291928]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.48366013

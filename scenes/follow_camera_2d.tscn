@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ofctocr5ms4d"]
+[gd_scene format=3 uid="uid://ofctocr5ms4d"]
 
 [ext_resource type="Script" uid="uid://dnoqw7xlxw07f" path="res://scripts/follow_camera_2d.gd" id="1_j6cg7"]
+[ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="2_rhrdn"]
 
-[node name="FollowCamera2D" type="Camera2D"]
+[node name="FollowCamera2D" type="Camera2D" unique_id=1120838044]
 script = ExtResource("1_j6cg7")
+
+[node name="Node2D" parent="." unique_id=1171659677 instance=ExtResource("2_rhrdn")]

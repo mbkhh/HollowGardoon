@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpf42jfo6h2pk"]
 
 [ext_resource type="Script" uid="uid://3qgpt6tjp0rl" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="2_dinhu"]
 [ext_resource type="Theme" uid="uid://bkse6ryihngnw" path="res://assets/sprites/Assets/UI/Themes/Button.tres" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="2_yqjtg"]
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="3_0tnpc"]
@@ -32,6 +33,8 @@ point_count = 2
 script = ExtResource("1_uwrxv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1067734490]
+
+[node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("2_dinhu")]
 
 [node name="Buttons" type="Node" parent="." unique_id=1126781375]
 
@@ -110,7 +113,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1646.193
+rotation = -1371.895
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -129,7 +132,7 @@ texture = ExtResource("4_iywne")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(336, -96.99999)
-rotation = 236.3199
+rotation = -37.221874
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
