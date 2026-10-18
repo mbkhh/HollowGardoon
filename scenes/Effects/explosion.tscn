@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcuihdn2etovl"]
+
+[ext_resource type="Script" uid="uid://kgs28b3lf8l5" path="res://scripts/explosion.gd" id="1_rdj7y"]
+[ext_resource type="Texture2D" uid="uid://caftw0re7jc4l" path="res://assets/sprites/Assets/Explosions.png" id="2_rdj7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tyls"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(0, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m4dv"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(1176, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwu18"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(2352, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aev2"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(3528, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uybi8"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(4704, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cq1i1"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(5880, 0, 1176, 1125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5r0v"]
+atlas = ExtResource("2_rdj7y")
+region = Rect2(7056, 0, 1176, 1125)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uybi8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tyls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m4dv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwu18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aev2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uybi8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cq1i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5r0v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="explosion" type="Node2D"]
+script = ExtResource("1_rdj7y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 2.999977)
+scale = Vector2(0.17149222, 0.1690216)
+sprite_frames = SubResource("SpriteFrames_uybi8")
+autoplay = "default"
+frame_progress = 0.9589262
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

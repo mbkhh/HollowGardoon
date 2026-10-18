@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://beme3hg58un3x"
+path="res://.godot/imported/فونت سرباز.ttf-26d7af01a40ab2d19db3a7ac5bdcd0f0.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/فونت سرباز.ttf"
+dest_files=["res://.godot/imported/فونت سرباز.ttf-26d7af01a40ab2d19db3a7ac5bdcd0f0.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

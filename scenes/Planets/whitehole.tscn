@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://chiwt2btq2p2c"]
+
+[ext_resource type="Script" uid="uid://0qmjtd0ruqqv" path="res://scripts/whitehole.gd" id="1_vy3rw"]
+[ext_resource type="Texture2D" uid="uid://c52j7k0jigj1x" path="res://assets/sprites/Assets/blackHole.png" id="2_vy3rw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vy3rw"]
+radius = 60.0
+
+[node name="Whitehole" type="Area2D"]
+rotation = 12.205724
+script = ExtResource("1_vy3rw")
+gravity_strength_factor = 0.312
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.7683716e-07, -9.536743e-07)
+rotation = 93.79608
+scale = Vector2(0.1171875, 0.1171875)
+texture = ExtResource("2_vy3rw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vy3rw")
+
+[node name="Line2D" type="Line2D" parent="."]

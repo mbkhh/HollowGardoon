@@ -1,0 +1,205 @@
+[gd_scene load_steps=19 format=3 uid="uid://33kdrofyxgp8"]
+
+[ext_resource type="Script" uid="uid://bpfg76tmeaf58" path="res://scripts/about_us.gd" id="1_bjp2s"]
+[ext_resource type="Theme" uid="uid://x17b0mv7nh7a" path="res://assets/sprites/Assets/UI/Themes/setting.tres" id="2_5i3i6"]
+[ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="3_5i3i6"]
+[ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="3_c76q0"]
+[ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="4_vwiw6"]
+[ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="5_e1qjp"]
+[ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="6_1bhnm"]
+[ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="7_2sa3g"]
+[ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="8_uob3k"]
+[ext_resource type="PackedScene" uid="uid://ea7p22q0f38d" path="res://scenes/Planets/sun.tscn" id="8_vwiw6"]
+[ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="9_rc30t"]
+[ext_resource type="Texture2D" uid="uid://bj5wb8tmbf5nt" path="res://assets/sprites/PixL_logo.png" id="11_c76q0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c76q0"]
+texture = ExtResource("4_vwiw6")
+
+[sub_resource type="Theme" id="Theme_vwiw6"]
+
+[sub_resource type="Curve2D" id="Curve2D_1g033"]
+bake_interval = 303.66
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -733, -90, 0, 0, 0, 0, -394, 71, 0, 0, 0, 0, -197, 595, 0, 0, 0, 0, 128, 57, 0, 0, 0, 0, 503, 571)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_01roj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 926, -116, 0, 0, 0, 0, -796, 80)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjs24"]
+texture = ExtResource("9_rc30t")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c76q0"]
+blend_mode = 1
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_bjp2s")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = -1
+offset_left = -109.0
+offset_top = -129.0
+offset_right = 105.0
+offset_bottom = 141.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c76q0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -73.0
+offset_top = -108.0
+offset_right = 69.0
+offset_bottom = -70.0
+theme = ExtResource("2_5i3i6")
+theme_override_fonts/font = ExtResource("3_5i3i6")
+text = "Team PixL:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 52.0
+offset_right = 146.0
+offset_bottom = 213.0
+theme = SubResource("Theme_vwiw6")
+theme_override_fonts/font = ExtResource("3_5i3i6")
+text = "محمد باقر خندان
+فرزان ابراهیمی
+حسین همتی
+رضا نظریه"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -55.0
+offset_top = -262.0
+offset_right = 56.0
+offset_bottom = -222.0
+theme = ExtResource("2_5i3i6")
+text = "about us"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Label"]
+z_index = -1
+layout_mode = 0
+offset_left = -70.0
+offset_top = -14.0
+offset_right = 182.0
+offset_bottom = 66.0
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="Node2D" parent="."]
+z_index = -4096
+
+[node name="Background0" type="Sprite2D" parent="background"]
+position = Vector2(73, 11)
+texture = ExtResource("3_c76q0")
+
+[node name="Background2" type="Sprite2D" parent="background"]
+position = Vector2(18.999998, -9)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_1bhnm")
+
+[node name="Background1" type="Sprite2D" parent="background"]
+z_index = 10
+position = Vector2(1, -14.000002)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_2sa3g")
+
+[node name="Sun" parent="background" instance=ExtResource("8_vwiw6")]
+position = Vector2(1, -327)
+rotation = 26.702692
+scale = Vector2(0.99999994, 0.99999994)
+radius = 300.0
+mass = 1800.0
+orbit_radius = 400.0
+
+[node name="Planet" parent="background" instance=ExtResource("5_e1qjp")]
+position = Vector2(785, -338)
+rotation = -981.17456
+SelectedType = "planet04"
+radius = 74.0
+mass = 54.76
+orbit_radius = 117.5
+
+[node name="Path2D" type="Path2D" parent="background"]
+position = Vector2(76, -283)
+curve = SubResource("Curve2D_1g033")
+
+[node name="AsteroidMover" parent="background/Path2D" instance=ExtResource("8_uob3k")]
+position = Vector2(-733, -90)
+rotation = 0.44338816
+speed = 150.0
+
+[node name="Path2D2" type="Path2D" parent="background"]
+curve = SubResource("Curve2D_01roj")
+
+[node name="AsteroidMover" parent="background/Path2D2" instance=ExtResource("8_uob3k")]
+position = Vector2(926, -116)
+rotation = 3.0282593
+speed = 50.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Back" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.48366013
+anchor_top = 2.9777777
+anchor_right = 0.48366013
+anchor_bottom = 2.9777777
+offset_left = 440.0
+offset_top = 191.0
+offset_right = 540.0
+offset_bottom = 291.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gjs24")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gjs24")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gjs24")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_gjs24")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gjs24")
+text = "
+"
+
+[node name="PixLLogo" type="Sprite2D" parent="."]
+position = Vector2(-291, 9.536743e-06)
+scale = Vector2(0.19726563, 0.19726563)
+texture = ExtResource("11_c76q0")
+
+[node name="PixLLogo" type="Sprite2D" parent="PixLLogo"]
+z_index = -1
+material = SubResource("CanvasItemMaterial_c76q0")
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("11_c76q0")
+
+[node name="Panel2" type="Panel" parent="."]
+z_index = -1
+offset_left = 459.0
+offset_top = -106.0
+offset_right = 673.0
+offset_bottom = 164.0
+rotation = 1.5707964
+theme_override_styles/panel = SubResource("StyleBoxTexture_c76q0")
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel2"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 236.0
+offset_right = 235.0
+offset_bottom = 401.0
+rotation = -1.5707964
+theme_override_colors/default_color = Color(0.11764706, 0.3764706, 0.5568628, 1)
+theme_override_fonts/normal_font = ExtResource("3_5i3i6")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "لینک گیت‌هاب پروژه
+ بعد از رویداد باگز بازی
+ پابلیک خواهد شد
+[url=https://github.com/mbkhh/pixL](کلیک کنید)[/url]"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="meta_clicked" from="Panel2/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

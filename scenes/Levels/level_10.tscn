@@ -1,0 +1,272 @@
+[gd_scene load_steps=23 format=3 uid="uid://dfre8t04h4edy"]
+
+[ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_6mjud"]
+[ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_hhyhm"]
+[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_iu4kj"]
+[ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="3_mwkwm"]
+[ext_resource type="PackedScene" uid="uid://ofctocr5ms4d" path="res://scenes/follow_camera_2d.tscn" id="4_iu4kj"]
+[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_uusv0"]
+[ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="5_uusv0"]
+[ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="6_g10o8"]
+[ext_resource type="PackedScene" uid="uid://chiwt2btq2p2c" path="res://scenes/Planets/whitehole.tscn" id="7_lniya"]
+[ext_resource type="PackedScene" uid="uid://ea7p22q0f38d" path="res://scenes/Planets/sun.tscn" id="8_8b5qq"]
+[ext_resource type="PackedScene" uid="uid://rpq3c25oaag8" path="res://scenes/star.tscn" id="9_kwa6m"]
+[ext_resource type="PackedScene" uid="uid://crerankty05s0" path="res://scenes/pause_menu.tscn" id="11_s0qf3"]
+[ext_resource type="PackedScene" uid="uid://datxgs26v6hyr" path="res://scenes/star_hud.tscn" id="12_e0qs2"]
+[ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="12_tj5vm"]
+[ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="13_y0y3i"]
+[ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="14_ihbia"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvd7i"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wqj8e"]
+
+[sub_resource type="Curve2D" id="Curve2D_pw33c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 621, 1001, 0, 0, 0, 0, 579, -159)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_pcff6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2715, -59, 0, 0, 0, 0, 1784, 1274)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_a587u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 621, -126, 0, 0, 0, 0, 677, 1024)
+}
+point_count = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohlwr"]
+texture = ExtResource("13_y0y3i")
+
+[node name="temp_Level_M" type="Node2D"]
+script = ExtResource("1_6mjud")
+level_id = "level_10"
+next_level_scene = "uid://vj0f3ikb0qo0"
+metadata/_edit_horizontal_guides_ = [2048.0, 1297.0, 864.0, 1650.0]
+metadata/_edit_vertical_guides_ = [1534.0]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_hhyhm")]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2304, 0)
+
+[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(576, 702)
+texture = ExtResource("3_iu4kj")
+
+[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(1728, 702)
+texture = ExtResource("3_iu4kj")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(2304, 0)
+
+[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(576, 162)
+texture = ExtResource("4_uusv0")
+
+[node name="BackgroundC3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(1728, 162)
+texture = ExtResource("4_uusv0")
+
+[node name="killNodes" type="Node" parent="."]
+
+[node name="killzone" parent="killNodes" instance=ExtResource("3_mwkwm")]
+position = Vector2(478, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone"]
+shape = SubResource("WorldBoundaryShape2D_hvd7i")
+
+[node name="killzone3" parent="killNodes" instance=ExtResource("3_mwkwm")]
+position = Vector2(337, 647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killNodes/killzone3"]
+position = Vector2(61, 218)
+shape = SubResource("WorldBoundaryShape2D_wqj8e")
+
+[node name="FollowCamera2D" parent="." instance=ExtResource("4_iu4kj")]
+position = Vector2(768, 432)
+zoom = Vector2(0.75, 0.75)
+target_path = NodePath("../Rocket")
+max_x = 100000.0
+
+[node name="Rocket" parent="." groups=["rocket"] instance=ExtResource("5_uusv0")]
+position = Vector2(278, 313)
+
+[node name="goal planet" type="Node" parent="."]
+
+[node name="Planet8" parent="goal planet" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(4486, 583)
+rotation = -626.10156
+scale = Vector2(0.9999998, 0.9999998)
+is_goal_planet = true
+SelectedType = "planet03"
+radius = 90.0
+mass = 81.0
+orbit_radius = 137.5
+
+[node name="wormwholes" type="Node" parent="."]
+
+[node name="Whitehole" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") instance=ExtResource("7_lniya")]
+position = Vector2(1937, 432.00012)
+rotation = -0.36064684
+linked_whitehole = NodePath("../Whitehole2")
+radius = 90.0
+
+[node name="Whitehole2" parent="wormwholes" node_paths=PackedStringArray("linked_whitehole") instance=ExtResource("7_lniya")]
+position = Vector2(3500, 423.99997)
+rotation = -0.36064684
+linked_whitehole = NodePath("../Whitehole")
+radius = 90.0
+
+[node name="planets" type="Node" parent="."]
+
+[node name="Planet2" parent="planets" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(3566.0005, 714.9999)
+rotation = -613.7434
+SelectedType = "planet08"
+radius = 60.0
+mass = 36.0
+orbit_radius = 100.0
+
+[node name="Planet4" parent="planets" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(811, 417.99997)
+rotation = -71.98283
+radius = 150.0
+mass = 225.0
+orbit_radius = 212.5
+
+[node name="Planet6" parent="planets" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(185, 360.00006)
+rotation = 18.564766
+SelectedType = "planet01"
+radius = 60.0
+mass = 36.0
+orbit_radius = 100.0
+
+[node name="Planet7" parent="planets" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(1386, 617.99994)
+rotation = 318.73758
+scale = Vector2(0.99999994, 0.99999994)
+SelectedType = "planet08"
+radius = 90.0
+mass = 81.0
+orbit_radius = 137.5
+
+[node name="Planet14" parent="planets" groups=["planets"] instance=ExtResource("6_g10o8")]
+position = Vector2(3903.0002, 302.00018)
+rotation = -791.3203
+scale = Vector2(0.99999994, 0.99999994)
+SelectedType = "planet07"
+radius = 90.0
+mass = 81.0
+orbit_radius = 137.5
+
+[node name="suns" type="Node" parent="."]
+
+[node name="Sun" parent="suns" groups=["planets"] instance=ExtResource("8_8b5qq")]
+position = Vector2(1436, 60)
+rotation = -659.0295
+density = 0.015
+mass = 150.0
+
+[node name="Sun2" parent="suns" groups=["planets"] instance=ExtResource("8_8b5qq")]
+position = Vector2(2666.9995, 446.99997)
+rotation = -352.62918
+radius = 350.0
+density = 0.015
+mass = 1837.5
+orbit_radius = 462.5
+
+[node name="Stars" type="Node" parent="."]
+
+[node name="star" parent="Stars" groups=["stars"] instance=ExtResource("9_kwa6m")]
+position = Vector2(598, 428)
+
+[node name="star2" parent="Stars" groups=["stars"] instance=ExtResource("9_kwa6m")]
+position = Vector2(3645, 668)
+star_index = 2
+
+[node name="star3" parent="Stars" groups=["stars"] instance=ExtResource("9_kwa6m")]
+position = Vector2(1032, 421)
+star_index = 1
+
+[node name="Node" type="Node" parent="Stars"]
+
+[node name="Asteroids" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Asteroids"]
+curve = SubResource("Curve2D_pw33c")
+
+[node name="AsteroidMover" parent="Asteroids/Path2D" instance=ExtResource("12_tj5vm")]
+position = Vector2(621, 1001)
+rotation = -1.6069874
+speed = 250.0
+
+[node name="Path2D3" type="Path2D" parent="Asteroids"]
+position = Vector2(1893, -122)
+curve = SubResource("Curve2D_pcff6")
+
+[node name="AsteroidMover" parent="Asteroids/Path2D3" instance=ExtResource("12_tj5vm")]
+position = Vector2(2715, -59)
+rotation = 2.1804643
+speed = 250.0
+
+[node name="Path2D4" type="Path2D" parent="Asteroids"]
+position = Vector2(384, 21)
+curve = SubResource("Curve2D_a587u")
+
+[node name="AsteroidMover" parent="Asteroids/Path2D4" instance=ExtResource("12_tj5vm")]
+position = Vector2(621, -126)
+rotation = 1.5221391
+speed = 250.0
+
+[node name="moons" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(576, 324)
+transform = Transform2D(1, 0, 0, 1, 576, 324)
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_s0qf3")]
+visible = false
+z_index = 8
+offset_left = -574.0
+offset_top = -321.0
+offset_right = 575.0
+offset_bottom = 322.0
+
+[node name="StarHUD" parent="CanvasLayer" instance=ExtResource("12_e0qs2")]
+z_index = 4
+offset_left = -516.0
+offset_top = -276.0
+offset_right = -476.0
+offset_bottom = -236.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PuaseBtn" type="Button" parent="CanvasLayer"]
+offset_left = 417.0
+offset_top = -292.0
+offset_right = 537.0
+offset_bottom = -172.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/normal = SubResource("StyleBoxTexture_ohlwr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ohlwr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ohlwr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ohlwr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ohlwr")
+metadata/_edit_use_anchors_ = true
+
+[node name="LevelComplete" parent="CanvasLayer" instance=ExtResource("14_ihbia")]
+visible = false
+z_index = 8
+offset_left = -576.0
+offset_top = -322.0
+offset_right = 577.0
+offset_bottom = 321.0
+
+[connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]

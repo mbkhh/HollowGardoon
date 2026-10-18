@@ -1,0 +1,221 @@
+[gd_scene load_steps=29 format=3 uid="uid://ct7uxy4sept54"]
+
+[ext_resource type="Script" uid="uid://bvf6socgt8f0m" path="res://scripts/rocket2.gd" id="1_4kwge"]
+[ext_resource type="Texture2D" uid="uid://cc6e7kf2qev3p" path="res://assets/sprites/Assets/animation/f1.png" id="2_4wlmm"]
+[ext_resource type="Texture2D" uid="uid://dbexvcffgx88p" path="res://assets/sprites/Assets/SpaceShips/SpaceShip1.png" id="2_b336f"]
+[ext_resource type="Texture2D" uid="uid://cmqaabtxwd7ae" path="res://assets/sprites/Assets/Planets/Sun.png" id="2_x1vgh"]
+[ext_resource type="Texture2D" uid="uid://bctq3hok344s1" path="res://assets/sprites/Assets/SpaceShips/SpaceShip2.png" id="3_6nvjw"]
+[ext_resource type="Texture2D" uid="uid://berveqymalos3" path="res://assets/sprites/Assets/animation/f2.png" id="3_x1vgh"]
+[ext_resource type="Texture2D" uid="uid://d3k2yatwbuo5s" path="res://assets/sprites/Assets/animation/f3.png" id="4_aiakk"]
+[ext_resource type="Texture2D" uid="uid://bsht4xcavv2yr" path="res://assets/sprites/Assets/SpaceShips/SpaceShip3.png" id="4_qji33"]
+[ext_resource type="Texture2D" uid="uid://1wq15s4jhk8e" path="res://assets/sprites/Assets/SpaceShips/SpaceShip4.png" id="5_bljtx"]
+[ext_resource type="Texture2D" uid="uid://eqf5we6v2qdy" path="res://assets/sprites/Assets/animation/f4.png" id="5_hg57b"]
+[ext_resource type="Texture2D" uid="uid://uws8jk0y4ca3" path="res://assets/sprites/Assets/animation/f5.png" id="6_5jtd1"]
+[ext_resource type="Texture2D" uid="uid://c320dp10bwxhs" path="res://assets/sprites/fire/fire_tileset.png" id="6_6nvjw"]
+[ext_resource type="Texture2D" uid="uid://dhco1naqurf06" path="res://assets/sprites/Assets/UI/ReverseButton.png" id="7_bljtx"]
+[ext_resource type="Texture2D" uid="uid://gc7vlno4l2mh" path="res://assets/sprites/Assets/UI/CancelButton2.png" id="8_did11"]
+[ext_resource type="AudioStream" uid="uid://d1cvq5qv2fgu" path="res://assets/sounds/Blink2.wav" id="15_aiakk"]
+[ext_resource type="AudioStream" uid="uid://b4xu7xck38aau" path="res://assets/sounds/Engine_Voosh.mp3" id="16_hg57b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kwge"]
+height = 50.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiakk"]
+atlas = ExtResource("2_x1vgh")
+region = Rect2(15, 8, 3, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg57b"]
+atlas = ExtResource("2_x1vgh")
+region = Rect2(42, 8, 3, 4)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uo7s7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiakk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4wlmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x1vgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_aiakk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hg57b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5jtd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg57b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_did11"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b336f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6nvjw")
+}],
+"loop": true,
+"name": &"ship1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qji33")
+}],
+"loop": true,
+"name": &"ship2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bljtx")
+}],
+"loop": true,
+"name": &"ship3",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb1v2"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(0, 0, 526, 526)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11viu"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(526, 0, 526, 526)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alt5x"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(1052, 0, 526, 526)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65tnw"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(1578, 0, 526, 526)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6f3q"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(0, 526, 526, 526)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32uhq"]
+atlas = ExtResource("6_6nvjw")
+region = Rect2(526, 526, 526, 526)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qji33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb1v2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11viu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alt5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65tnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6f3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32uhq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[node name="Rocket" type="RigidBody2D"]
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("1_4kwge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4kwge")
+
+[node name="OrbitEffects" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.8236099, -0.90188974)
+scale = Vector2(0.09835255, 0.09835255)
+sprite_frames = SubResource("SpriteFrames_uo7s7")
+frame = 6
+frame_progress = 1.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+offset_left = 38.0
+offset_top = -23.0
+offset_right = 42.0
+offset_bottom = 23.0
+fill_mode = 3
+show_percentage = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_did11")
+animation = &"ship1"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+z_index = -10
+position = Vector2(0, 370)
+rotation = 1.5707964
+scale = Vector2(1.1840041, 1.2)
+sprite_frames = SubResource("SpriteFrames_qji33")
+frame_progress = 0.83498406
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ReverseButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = 187.0
+offset_right = -342.0
+offset_bottom = 365.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_bljtx")
+flat = true
+
+[node name="CancelButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 384.0
+offset_top = 176.0
+offset_right = 562.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("8_did11")
+flat = true
+
+[node name="orbitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_aiakk")
+bus = &"SFX"
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_hg57b")
+volume_db = -12.0
+bus = &"SFX"

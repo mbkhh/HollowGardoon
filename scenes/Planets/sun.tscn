@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://ea7p22q0f38d"]
+
+[ext_resource type="Script" uid="uid://ci2t2j5auadgy" path="res://scripts/sun.gd" id="1_bldv3"]
+[ext_resource type="Texture2D" uid="uid://dxtcxfywiiq67" path="res://assets/sprites/Assets/Planets/Sun1.png" id="2_jstgs"]
+[ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="8_w5lwm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkwxn"]
+radius = 100.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi7s5"]
+atlas = ExtResource("2_jstgs")
+region = Rect2(0, 0, 492, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_foe20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi7s5")
+}],
+"loop": true,
+"name": &"sun00",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqhf4"]
+radius = 150.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7f3s"]
+radius = 100.0
+
+[node name="Sun" type="StaticBody2D"]
+rotation = -380.84387
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_bldv3")
+mass = 200.0
+orbit_radius = 150.0
+metadata/_edit_vertical_guides_ = [100.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.0000004, 1.0000004)
+shape = SubResource("CircleShape2D_lkwxn")
+debug_color = Color(0.8376693, 0.20860654, 0.7999173, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.51282054, 0.51282054)
+sprite_frames = SubResource("SpriteFrames_foe20")
+animation = &"sun00"
+
+[node name="GravityWell" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityWell"]
+shape = SubResource("CircleShape2D_cqhf4")
+
+[node name="OrbitPath" type="Line2D" parent="GravityWell"]
+points = PackedVector2Array(150, 0, 149.27771, 14.702571, 147.11778, 29.263548, 143.54105, 43.542698, 138.58192, 57.402515, 132.2882, 70.70951, 124.720436, 83.33553, 115.95157, 95.15899, 106.06602, 106.06602, 95.15899, 115.95157, 83.33553, 124.720436, 70.70951, 132.2882, 57.402515, 138.58192, 43.542698, 143.54105, 29.263548, 147.11778, 14.702571, 149.27771, 9.184548e-15, 150, -14.702571, 149.27771, -29.263548, 147.11778, -43.542698, 143.54105, -57.402515, 138.58192, -70.70951, 132.2882, -83.33553, 124.720436, -95.15899, 115.95157, -106.06602, 106.06602, -115.95157, 95.15899, -124.720436, 83.33553, -132.2882, 70.70951, -138.58192, 57.402515, -143.54105, 43.542698, -147.11778, 29.263548, -149.27771, 14.702571, -150, 1.8369095e-14, -149.27771, -14.702571, -147.11778, -29.263548, -143.54105, -43.542698, -138.58192, -57.402515, -132.2882, -70.70951, -124.720436, -83.33553, -115.95157, -95.15899, -106.06602, -106.06602, -95.15899, -115.95157, -83.33553, -124.720436, -70.70951, -132.2882, -57.402515, -138.58192, -43.542698, -143.54105, -29.263548, -147.11778, -14.702571, -149.27771, -2.7553643e-14, -150, 14.702571, -149.27771, 29.263548, -147.11778, 43.542698, -143.54105, 57.402515, -138.58192, 70.70951, -132.2882, 83.33553, -124.720436, 95.15899, -115.95157, 106.06602, -106.06602, 115.95157, -95.15899, 124.720436, -83.33553, 132.2882, -70.70951, 138.58192, -57.402515, 143.54105, -43.542698, 147.11778, -29.263548, 149.27771, -14.702571, 150, -3.673819e-14)
+joint_mode = 2
+
+[node name="killzone" parent="." instance=ExtResource("8_w5lwm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("CircleShape2D_w7f3s")
+debug_color = Color(0.64667875, 0.5145223, 0.26367807, 0.41960785)
+
+[connection signal="body_entered" from="GravityWell" to="." method="_on_gravity_well_body_entered"]
+[connection signal="body_exited" from="GravityWell" to="." method="_on_gravity_well_body_exited"]

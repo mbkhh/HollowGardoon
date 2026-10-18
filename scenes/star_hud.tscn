@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://datxgs26v6hyr"]
+
+[ext_resource type="Script" uid="uid://ba07lgefvtp4v" path="res://scripts/star_hud.gd" id="1_yak0e"]
+[ext_resource type="Texture2D" uid="uid://cxgj8m6bx2eca" path="res://assets/sprites/Assets/UI/Star_Black.png" id="2_fm8kj"]
+[ext_resource type="Texture2D" uid="uid://ctrrkmbj1dtfa" path="res://assets/sprites/Assets/UI/Star_Glowing.png" id="3_dry2q"]
+[ext_resource type="Texture2D" uid="uid://cq680y5og3co3" path="res://assets/sprites/Assets/UI/Star.png" id="4_p8ayk"]
+
+[node name="StarHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_yak0e")
+empty_star_texture = ExtResource("2_fm8kj")
+previous_star_texture = ExtResource("3_dry2q")
+current_star_texture = ExtResource("4_p8ayk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Star0" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fm8kj")
+
+[node name="Star1" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fm8kj")
+
+[node name="Star2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_fm8kj")

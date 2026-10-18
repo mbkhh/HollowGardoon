@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf7qxd66cx3yd"]
+
+[ext_resource type="AudioStream" uid="uid://cnsd6ukihog1m" path="res://assets/musics/[UNOFFICIAL] Earthbound (1).mp3" id="1_ta4dt"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_ta4dt")
+autoplay = true
+bus = &"Music"

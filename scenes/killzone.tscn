@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcn1xdis2ddgp"]
+
+[ext_resource type="Script" uid="uid://byllero5dhfvf" path="res://scripts/killzone.gd" id="1_xlapc"]
+[ext_resource type="AudioStream" uid="uid://cxl7jf25t0dsc" path="res://assets/sounds/explosion.mp3" id="2_kl8fp"]
+
+[node name="killzone" type="Area2D"]
+script = ExtResource("1_xlapc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kl8fp")
+volume_db = -12.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

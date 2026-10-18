@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6ia0jrntpr6j"]
+
+[ext_resource type="Script" uid="uid://gacp0t5847sy" path="res://scripts/moon.gd" id="1_modxw"]
+[ext_resource type="Texture2D" uid="uid://cp8avlcixpbpq" path="res://assets/sprites/Assets/Planets/Moon.png" id="2_modxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrl6c"]
+atlas = ExtResource("2_modxw")
+region = Rect2(0, 0, 420, 413)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_875es"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrl6c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fg4f"]
+radius = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1uw2"]
+radius = 50.0
+
+[node name="Moon" type="AnimatableBody2D"]
+script = ExtResource("1_modxw")
+mass = 3.125
+orbit_radius = 50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.10416651, 0.27777767)
+scale = Vector2(0.125, 0.125)
+sprite_frames = SubResource("SpriteFrames_875es")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3fg4f")
+
+[node name="GravityWell" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GravityWell"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_u1uw2")
+
+[node name="OrbitPath" type="Line2D" parent="GravityWell"]
+points = PackedVector2Array(50, 0, 49.03926, 9.754517, 46.193974, 19.13417, 41.57348, 27.778513, 35.35534, 35.35534, 27.778513, 41.57348, 19.13417, 46.193974, 9.754517, 49.03926, 3.0615159e-15, 50, -9.754517, 49.03926, -19.13417, 46.193974, -27.778513, 41.57348, -35.35534, 35.35534, -41.57348, 27.778513, -46.193974, 19.13417, -49.03926, 9.754517, -50, 6.1230318e-15, -49.03926, -9.754517, -46.193974, -19.13417, -41.57348, -27.778513, -35.35534, -35.35534, -27.778513, -41.57348, -19.13417, -46.193974, -9.754517, -49.03926, -9.184548e-15, -50, 9.754517, -49.03926, 19.13417, -46.193974, 27.778513, -41.57348, 35.35534, -35.35534, 41.57348, -27.778513, 46.193974, -19.13417, 49.03926, -9.754517, 50, -1.22460635e-14)
+
+[node name="MoonPath" type="Line2D" parent="."]
+top_level = true
+points = PackedVector2Array(300, 0, 298.55542, 29.405142, 294.23557, 58.527096, 287.0821, 87.085396, 277.16385, 114.80503, 264.5764, 141.41902, 249.44087, 166.67107, 231.90314, 190.31798, 212.13203, 212.13203, 190.31798, 231.90314, 166.67107, 249.44087, 141.41902, 264.5764, 114.80503, 277.16385, 87.085396, 287.0821, 58.527096, 294.23557, 29.405142, 298.55542, 1.8369095e-14, 300, -29.405142, 298.55542, -58.527096, 294.23557, -87.085396, 287.0821, -114.80503, 277.16385, -141.41902, 264.5764, -166.67107, 249.44087, -190.31798, 231.90314, -212.13203, 212.13203, -231.90314, 190.31798, -249.44087, 166.67107, -264.5764, 141.41902, -277.16385, 114.80503, -287.0821, 87.085396, -294.23557, 58.527096, -298.55542, 29.405142, -300, 3.673819e-14, -298.55542, -29.405142, -294.23557, -58.527096, -287.0821, -87.085396, -277.16385, -114.80503, -264.5764, -141.41902, -249.44087, -166.67107, -231.90314, -190.31798, -212.13203, -212.13203, -190.31798, -231.90314, -166.67107, -249.44087, -141.41902, -264.5764, -114.80503, -277.16385, -87.085396, -287.0821, -58.527096, -294.23557, -29.405142, -298.55542, -5.5107286e-14, -300, 29.405142, -298.55542, 58.527096, -294.23557, 87.085396, -287.0821, 114.80503, -277.16385, 141.41902, -264.5764, 166.67107, -249.44087, 190.31798, -231.90314, 212.13203, -212.13203, 231.90314, -190.31798, 249.44087, -166.67107, 264.5764, -141.41902, 277.16385, -114.80503, 287.0821, -87.085396, 294.23557, -58.527096, 298.55542, -29.405142, 300, -7.347638e-14)
+
+[connection signal="body_entered" from="GravityWell" to="." method="_on_gravity_well_body_entered"]
+[connection signal="body_exited" from="GravityWell" to="." method="_on_gravity_well_body_exited"]
