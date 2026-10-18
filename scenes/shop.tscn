@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cm2t5sbydqhty"]
+[gd_scene format=3 uid="uid://cm2t5sbydqhty"]
 
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="1_8r1wq"]
 [ext_resource type="Script" uid="uid://buo1t640vhjcu" path="res://scripts/shop.gd" id="1_j14q8"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="2_ajxib"]
+[ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="2_j14q8"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="3_y6sft"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="4_m4ofw"]
 [ext_resource type="Texture2D" uid="uid://cer12jw10hk5h" path="res://assets/sprites/background/Background_1.png" id="5_heatd"]
@@ -12,9 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cofv3pydp16a" path="res://assets/sprites/Assets/UI/StartButtonTextless.png" id="9_1v8qu"]
 [ext_resource type="Texture2D" uid="uid://dbexvcffgx88p" path="res://assets/sprites/Assets/SpaceShips/SpaceShip1.png" id="10_heatd"]
 [ext_resource type="Theme" uid="uid://2j1y4e0m0e10" path="res://assets/sprites/Assets/UI/Themes/shop.tres" id="11_5u241"]
-[ext_resource type="Texture2D" uid="uid://bctq3hok344s1" path="res://assets/sprites/Assets/SpaceShips/SpaceShip2.png" id="11_24it5"]
-[ext_resource type="Texture2D" uid="uid://bsht4xcavv2yr" path="res://assets/sprites/Assets/SpaceShips/SpaceShip3.png" id="12_7mqwv"]
-[ext_resource type="Texture2D" uid="uid://1wq15s4jhk8e" path="res://assets/sprites/Assets/SpaceShips/SpaceShip4.png" id="13_gobkm"]
 [ext_resource type="Texture2D" uid="uid://eb8rnneorgj6" path="res://assets/sprites/Assets/UI/Settings.png" id="15_j14q8"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="16_5u241"]
 [ext_resource type="AudioStream" uid="uid://r0fpuox2irg6" path="res://assets/sounds/click-tick.wav" id="18_pqync"]
@@ -38,111 +36,113 @@ texture = ExtResource("16_5u241")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5u241"]
 texture = ExtResource("15_j14q8")
 
-[node name="Shop" type="Node2D"]
+[node name="Shop" type="Node2D" unique_id=1300595225]
 script = ExtResource("1_j14q8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1268833560]
 
-[node name="background" type="Node2D" parent="."]
+[node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("2_j14q8")]
+
+[node name="background" type="Node2D" parent="." unique_id=1387399618]
 z_index = -4096
 
-[node name="Background0" type="Sprite2D" parent="background"]
+[node name="Background0" type="Sprite2D" parent="background" unique_id=1867100382]
 position = Vector2(2, -4)
 texture = ExtResource("1_8r1wq")
 
-[node name="Frame" type="Sprite2D" parent="background"]
+[node name="Frame" type="Sprite2D" parent="background" unique_id=821528142]
 visible = false
 position = Vector2(0, 16)
 scale = Vector2(0.7, 0.55)
 texture = ExtResource("2_ajxib")
 
-[node name="Planet2" parent="background" instance=ExtResource("3_y6sft")]
+[node name="Planet2" parent="background" unique_id=1802480522 instance=ExtResource("3_y6sft")]
 position = Vector2(163.00003, -544)
-rotation = -1312.2917
+rotation = -1308.3115
 SelectedType = "planet02"
 radius = 75.0
 mass = 56.25
 orbit_radius = 118.75
 
-[node name="Background2" type="Sprite2D" parent="background"]
+[node name="Background2" type="Sprite2D" parent="background" unique_id=1173006443]
 position = Vector2(18.999998, -9)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_m4ofw")
 
-[node name="Background1" type="Sprite2D" parent="background"]
+[node name="Background1" type="Sprite2D" parent="background" unique_id=1461445589]
 z_index = 10
 position = Vector2(1, -14.000002)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("5_heatd")
 
-[node name="Planet" parent="background" instance=ExtResource("3_y6sft")]
+[node name="Planet" parent="background" unique_id=428805308 instance=ExtResource("3_y6sft")]
 position = Vector2(-360, 169)
-rotation = 224.10019
+rotation = 223.5295
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
 
-[node name="Path2D" type="Path2D" parent="background"]
+[node name="Path2D" type="Path2D" parent="background" unique_id=1167610782]
 position = Vector2(76, -283)
 curve = SubResource("Curve2D_44xle")
 
-[node name="AsteroidMover" parent="background/Path2D" instance=ExtResource("6_1v8qu")]
+[node name="AsteroidMover" parent="background/Path2D" unique_id=1458907209 instance=ExtResource("6_1v8qu")]
 position = Vector2(587, -193)
 rotation = 2.1732223
 speed = 150.0
 
-[node name="Path2D2" type="Path2D" parent="background"]
+[node name="Path2D2" type="Path2D" parent="background" unique_id=33531919]
 position = Vector2(5, 35)
 curve = SubResource("Curve2D_24it5")
 
-[node name="AsteroidMover" parent="background/Path2D2" instance=ExtResource("6_1v8qu")]
+[node name="AsteroidMover" parent="background/Path2D2" unique_id=95497016 instance=ExtResource("6_1v8qu")]
 position = Vector2(-750, -199)
 rotation = 0.47726974
 speed = 50.0
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1746745132]
 offset_left = -460.0
 offset_top = -290.0
 offset_right = -420.0
 offset_bottom = -207.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=406096633]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1917035572]
 layout_mode = 2
 
-[node name="XPLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="XPLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1959238346]
 layout_mode = 2
 theme = ExtResource("7_m4ofw")
 text = "Xp
 "
 
-[node name="MoneySymbolBlue" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel"]
+[node name="MoneySymbolBlue" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel" unique_id=1711272062]
 position = Vector2(-26, 21)
 rotation = -0.20943952
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_heatd")
 
-[node name="StartButtonTextless" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel"]
+[node name="StartButtonTextless" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/XPLabel" unique_id=473558163]
 z_index = -10
 position = Vector2(12, 22)
 scale = Vector2(0.54, 0.394)
 texture = ExtResource("9_1v8qu")
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=814177305]
 layout_mode = 2
 columns = 5
 
-[node name="RocketShip1Panel" type="Panel" parent="."]
+[node name="RocketShip1Panel" type="Panel" parent="." unique_id=234231927]
 offset_left = -502.0
 offset_top = -175.0
 offset_right = -285.0
 offset_bottom = 125.0
 theme = ExtResource("11_5u241")
 
-[node name="TextureRect" type="TextureRect" parent="RocketShip1Panel"]
+[node name="TextureRect" type="TextureRect" parent="RocketShip1Panel" unique_id=322291248]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -156,7 +156,7 @@ grow_horizontal = 2
 texture = ExtResource("10_heatd")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="RocketShip1Panel"]
+[node name="Label" type="Label" parent="RocketShip1Panel" unique_id=1415168831]
 layout_mode = 0
 offset_left = -3.0
 offset_top = 185.0
@@ -167,7 +167,7 @@ text = "Space Ship 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button1" type="Button" parent="RocketShip1Panel"]
+[node name="Button1" type="Button" parent="RocketShip1Panel" unique_id=747091799]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 229.0
@@ -176,14 +176,14 @@ offset_bottom = 274.0
 theme_override_font_sizes/font_size = 27
 text = "Buy"
 
-[node name="RocketShip2Panel" type="Panel" parent="."]
+[node name="RocketShip2Panel" type="Panel" parent="." unique_id=1324761579]
 offset_left = -243.0
 offset_top = -175.0
 offset_right = -26.0
 offset_bottom = 125.0
 theme = ExtResource("11_5u241")
 
-[node name="TextureRect" type="TextureRect" parent="RocketShip2Panel"]
+[node name="TextureRect" type="TextureRect" parent="RocketShip2Panel" unique_id=1747847964]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -193,10 +193,9 @@ offset_left = -70.0
 offset_right = 70.0
 offset_bottom = 153.0
 grow_horizontal = 2
-texture = ExtResource("11_24it5")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="RocketShip2Panel"]
+[node name="Label" type="Label" parent="RocketShip2Panel" unique_id=856254528]
 layout_mode = 0
 offset_left = -5.0
 offset_top = 185.0
@@ -207,7 +206,7 @@ text = "Space Ship 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="RocketShip2Panel"]
+[node name="Button2" type="Button" parent="RocketShip2Panel" unique_id=1674557440]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 229.0
@@ -216,14 +215,14 @@ offset_bottom = 274.0
 theme_override_font_sizes/font_size = 27
 text = "Buy"
 
-[node name="RocketShip3Panel" type="Panel" parent="."]
+[node name="RocketShip3Panel" type="Panel" parent="." unique_id=376085576]
 offset_left = 34.0
 offset_top = -175.0
 offset_right = 251.0
 offset_bottom = 126.0
 theme = ExtResource("11_5u241")
 
-[node name="TextureRect" type="TextureRect" parent="RocketShip3Panel"]
+[node name="TextureRect" type="TextureRect" parent="RocketShip3Panel" unique_id=818184966]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -233,10 +232,9 @@ offset_left = -70.0
 offset_right = 68.5
 offset_bottom = 199.0
 grow_horizontal = 2
-texture = ExtResource("12_7mqwv")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="RocketShip3Panel"]
+[node name="Label" type="Label" parent="RocketShip3Panel" unique_id=1433196030]
 layout_mode = 0
 offset_top = 188.0
 offset_right = 220.0
@@ -246,7 +244,7 @@ text = "Space Ship 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="RocketShip3Panel"]
+[node name="Button3" type="Button" parent="RocketShip3Panel" unique_id=58785573]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 230.0
@@ -255,14 +253,14 @@ offset_bottom = 275.0
 theme_override_font_sizes/font_size = 27
 text = "Buy"
 
-[node name="RocketShip4Panel" type="Panel" parent="."]
+[node name="RocketShip4Panel" type="Panel" parent="." unique_id=1550687080]
 offset_left = 300.0
 offset_top = -175.0
 offset_right = 517.0
 offset_bottom = 125.0
 theme = ExtResource("11_5u241")
 
-[node name="TextureRect" type="TextureRect" parent="RocketShip4Panel"]
+[node name="TextureRect" type="TextureRect" parent="RocketShip4Panel" unique_id=942410403]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -273,10 +271,9 @@ offset_top = 17.0
 offset_right = 65.5
 offset_bottom = 170.0
 grow_horizontal = 2
-texture = ExtResource("13_gobkm")
 expand_mode = 5
 
-[node name="Label" type="Label" parent="RocketShip4Panel"]
+[node name="Label" type="Label" parent="RocketShip4Panel" unique_id=1617324284]
 layout_mode = 0
 offset_left = -7.0
 offset_top = 185.0
@@ -287,7 +284,7 @@ text = "Space Ship 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button4" type="Button" parent="RocketShip4Panel"]
+[node name="Button4" type="Button" parent="RocketShip4Panel" unique_id=2029265363]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 228.0
@@ -296,9 +293,9 @@ offset_bottom = 273.0
 theme_override_font_sizes/font_size = 27
 text = "Buy"
 
-[node name="Buttons" type="Node" parent="."]
+[node name="Buttons" type="Node" parent="." unique_id=1663559662]
 
-[node name="Back" type="Button" parent="Buttons"]
+[node name="Back" type="Button" parent="Buttons" unique_id=241055376]
 anchors_preset = -1
 anchor_left = 0.48366013
 anchor_top = 2.9777777
@@ -316,7 +313,7 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_pqync")
 text = "
 "
 
-[node name="Setting" type="Button" parent="Buttons"]
+[node name="Setting" type="Button" parent="Buttons" unique_id=694220383]
 offset_left = 447.0
 offset_top = -321.0
 offset_right = 573.0
@@ -328,7 +325,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5u241")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_5u241")
 theme_override_styles/focus = SubResource("StyleBoxTexture_5u241")
 
-[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="." unique_id=361227061]
 stream = ExtResource("18_pqync")
 bus = &"SFX"
 

@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ea7p22q0f38d" path="res://scenes/Planets/sun.tscn" id="8_vwiw6"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="9_rc30t"]
 [ext_resource type="Texture2D" uid="uid://bj5wb8tmbf5nt" path="res://assets/sprites/PixL_logo.png" id="11_c76q0"]
+[ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="11_e1qjp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c76q0"]
 texture = ExtResource("4_vwiw6")
@@ -112,7 +113,7 @@ texture = ExtResource("7_2sa3g")
 
 [node name="Sun" parent="background" unique_id=36102581 instance=ExtResource("8_vwiw6")]
 position = Vector2(1, -327)
-rotation = 5.743327
+rotation = -0.19900791
 scale = Vector2(0.99999994, 0.99999994)
 radius = 300.0
 mass = 1800.0
@@ -120,7 +121,7 @@ orbit_radius = 400.0
 
 [node name="Planet" parent="background" unique_id=1511852575 instance=ExtResource("5_e1qjp")]
 position = Vector2(785, -338)
-rotation = -956.8684
+rotation = -954.1896
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
@@ -144,6 +145,8 @@ rotation = 3.0282593
 speed = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=317281565]
+
+[node name="Node2D" parent="Camera2D" unique_id=1171659677 instance=ExtResource("11_e1qjp")]
 
 [node name="Back" type="Button" parent="." unique_id=195087291]
 anchors_preset = -1
