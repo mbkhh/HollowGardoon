@@ -45,10 +45,10 @@ gravity_strength_factor = 0.0
 [node name="Buttons" type="Node" parent="." unique_id=1126781375]
 
 [node name="Start" type="Button" parent="Buttons" unique_id=1034794483]
-offset_left = -275.0
-offset_top = -44.0
-offset_right = -25.0
-offset_bottom = 56.0
+offset_left = -124.0
+offset_top = -53.0
+offset_right = 126.0
+offset_bottom = 47.0
 theme = ExtResource("2_iywne")
 text = "Start"
 
@@ -58,10 +58,10 @@ anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -532.17645
-offset_top = -1829.6
-offset_right = -282.17645
-offset_bottom = -1729.6
+offset_left = -676.17645
+offset_top = -1724.6
+offset_right = -426.17645
+offset_bottom = -1624.6
 theme = ExtResource("2_iywne")
 text = "Exit"
 
@@ -84,24 +84,16 @@ position = Vector2(1, -141)
 scale = Vector2(1.1591173, 2.3796875)
 texture = SubResource("ImageTexture_dinhu")
 
-[node name="shop" type="Button" parent="Buttons" unique_id=1566798450]
-offset_left = 25.0
-offset_top = -44.0
-offset_right = 275.0
-offset_bottom = 56.0
-theme = ExtResource("2_iywne")
-text = "Shop"
-
 [node name="About Us" type="Button" parent="Buttons" unique_id=694941058]
 anchors_preset = -1
 anchor_left = 0.48366013
 anchor_top = 2.9777777
 anchor_right = 0.48366013
 anchor_bottom = 2.9777777
-offset_left = -832.17645
-offset_top = -1829.6
-offset_right = -582.17645
-offset_bottom = -1729.6
+offset_left = -679.17645
+offset_top = -1858.6
+offset_right = -429.17645
+offset_bottom = -1758.6
 theme = ExtResource("2_iywne")
 text = "About Us"
 
@@ -120,8 +112,8 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1463.3894
-SelectedType = "planet01"
+rotation = -1473.9857
+SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
 orbit_radius = 118.75
@@ -133,7 +125,8 @@ texture = ExtResource("3_lbhrr")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -118.91393
+rotation = -128.40836
+SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
 orbit_radius = 117.5
@@ -177,5 +170,4 @@ bus = &"SFX"
 [connection signal="button_down" from="Buttons/Start" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="Buttons/Exit" to="." method="_on_button_2_button_down"]
 [connection signal="pressed" from="Buttons/Setting" to="." method="_on_setting_pressed"]
-[connection signal="pressed" from="Buttons/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Buttons/About Us" to="." method="_on_about_us_pressed"]
