@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_r00u7"]
 [ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_2vp10"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_0b27f"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_k0n5u"]
 [ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="4_lpoy4"]
 [ext_resource type="PackedScene" uid="uid://chiwt2btq2p2c" path="res://scenes/Planets/whitehole.tscn" id="5_3bqyq"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="5_p3qha"]
@@ -42,16 +40,8 @@ metadata/_edit_horizontal_guides_ = [2048.0, 648.0, 1297.0, 984.0, 1650.0, 595.0
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1008780060]
 motion_mirroring = Vector2(1152, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=194318897]
-position = Vector2(576, 486)
-texture = ExtResource("3_0b27f")
-
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=208553209]
 motion_mirroring = Vector2(1152, 0)
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1415275787]
-position = Vector2(576, 162)
-texture = ExtResource("4_k0n5u")
 
 [node name="killNodes" type="Node" parent="." unique_id=1041469788]
 
@@ -79,7 +69,7 @@ position = Vector2(612, 354)
 
 [node name="Planet8" parent="goal planet" unique_id=783388378 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(3115, 408.00006)
-rotation = 163.44339
+rotation = 161.95288
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -91,7 +81,7 @@ orbit_radius = 137.5
 
 [node name="Planet4" parent="planets" unique_id=1029304690 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(2593, 223)
-rotation = 1770.4497
+rotation = 1771.4404
 SelectedType = "planet03"
 radius = 60.0
 mass = 36.0
@@ -99,7 +89,7 @@ orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=811109282 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(1061, 278)
-rotation = -1899.5657
+rotation = -1901.0422
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -107,7 +97,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=512885841 groups=["planets"] instance=ExtResource("5_p3qha")]
 position = Vector2(513, 212)
-rotation = -2579.263
+rotation = -2580.5398
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0

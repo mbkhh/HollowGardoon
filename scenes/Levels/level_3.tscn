@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_3fumv"]
 [ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_3bt0o"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_46g8q"]
 [ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="3_r15cd"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_cu6c6"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="4_pvfsd"]
 [ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="5_r4pos"]
 [ext_resource type="PackedScene" uid="uid://ofctocr5ms4d" path="res://scenes/follow_camera_2d.tscn" id="6_euhem"]
@@ -37,24 +35,8 @@ metadata/_edit_vertical_guides_ = [1534.0]
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1933192654]
 motion_mirroring = Vector2(2304, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=531868554]
-position = Vector2(576, 702)
-texture = ExtResource("3_46g8q")
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=1518359356]
-position = Vector2(1728, 702)
-texture = ExtResource("3_46g8q")
-
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=22796939]
 motion_mirroring = Vector2(2304, 0)
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=101413285]
-position = Vector2(576, 162)
-texture = ExtResource("4_cu6c6")
-
-[node name="BackgroundC3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=413919013]
-position = Vector2(1728, 162)
-texture = ExtResource("4_cu6c6")
 
 [node name="killNodes" type="Node" parent="." unique_id=756461381]
 
@@ -84,7 +66,7 @@ position = Vector2(79, 443)
 
 [node name="Planet8" parent="goal planet" unique_id=1584790891 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(2865, 569.99994)
-rotation = -16.276537
+rotation = -18.439497
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -96,7 +78,7 @@ orbit_radius = 137.5
 
 [node name="Planet4" parent="planets" unique_id=1754267473 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(1270.9999, 564.99994)
-rotation = 101.80097
+rotation = 99.43172
 SelectedType = "planet03"
 radius = 60.0
 mass = 36.0
@@ -104,7 +86,7 @@ orbit_radius = 100.0
 
 [node name="Planet5" parent="planets" unique_id=1435337940 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(1858, 430.99994)
-rotation = -6.544715
+rotation = -7.44444
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet01"
 radius = 140.0
@@ -113,7 +95,7 @@ orbit_radius = 200.0
 
 [node name="Planet6" parent="planets" unique_id=1919453547 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(863.99994, 272)
-rotation = -210.36368
+rotation = -211.48703
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -121,7 +103,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1888432985 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(93, 613)
-rotation = 18.20724
+rotation = 17.095013
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -132,14 +114,14 @@ orbit_radius = 137.5
 
 [node name="Sun" parent="suns" unique_id=1011716644 groups=["planets"] instance=ExtResource("10_cu6c6")]
 position = Vector2(487, 429.99994)
-rotation = -165.14032
+rotation = -163.73515
 radius = 120.0
 mass = 288.0
 orbit_radius = 175.0
 
 [node name="Sun2" parent="suns" unique_id=301605888 groups=["planets"] instance=ExtResource("10_cu6c6")]
 position = Vector2(2491, 312)
-rotation = -462.84006
+rotation = -460.68552
 
 [node name="Stars" type="Node" parent="." unique_id=1711105416]
 

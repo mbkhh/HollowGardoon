@@ -13,8 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="10_j85eu"]
 [ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="11_4p1o3"]
 [ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="11_vtd0g"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="12_ngn3o"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="13_iiv34"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/story_opening.tscn" id="16_story_opening"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvd7i"]
@@ -56,7 +54,7 @@ position = Vector2(231, 448)
 
 [node name="Planet8" parent="goal planet" unique_id=1634106500 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1856.0001, 366.99994)
-rotation = 399.49652
+rotation = 396.38922
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet01"
@@ -68,7 +66,7 @@ orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=583936029 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(332, 451.99997)
-rotation = -1396.7722
+rotation = -1395.8977
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -76,7 +74,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1820529494 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1354, 382)
-rotation = -2038.8977
+rotation = -2036.5898
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -85,7 +83,7 @@ orbit_radius = 137.5
 
 [node name="Planet9" parent="planets" unique_id=1434569353 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(8297, 806)
-rotation = -281.71793
+rotation = -277.43143
 SelectedType = "planet02"
 radius = 60.0
 mass = 36.0
@@ -93,7 +91,7 @@ orbit_radius = 100.0
 
 [node name="Planet14" parent="planets" unique_id=1859049650 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(816.0001, 392.0001)
-rotation = -1409.9904
+rotation = -1420.3182
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet04"
 
@@ -205,20 +203,12 @@ horizontal_alignment = 2
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=839871480]
 motion_mirroring = Vector2(1152, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=1134584557]
-position = Vector2(576, 486)
-texture = ExtResource("12_ngn3o")
-
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1418373425]
 motion_mirroring = Vector2(1152, 0)
 
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1861855375]
-position = Vector2(576, 162)
-texture = ExtResource("13_iiv34")
-
 [node name="Sun" parent="." unique_id=304985471 groups=["planets"] instance=ExtResource("8_hk2jt")]
 position = Vector2(2438, 369.99994)
-rotation = -170.35535
+rotation = -172.67557
 
 [node name="StoryOpening" parent="." unique_id=1321478584 instance=ExtResource("16_story_opening")]
 
