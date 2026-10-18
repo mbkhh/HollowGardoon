@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://b7y5n0ogo4dw" path="res://assets/sprites/background/Background_0.png" id="1_gis3k"]
 [ext_resource type="Script" uid="uid://cbd1iqxlm8aj" path="res://scripts/settings.gd" id="1_gjs24"]
 [ext_resource type="Texture2D" uid="uid://cpwj2nc76n8wt" path="res://assets/sprites/Assets/UI/Frame.png" id="2_83j8s"]
-[ext_resource type="Theme" uid="uid://x17b0mv7nh7a" path="res://assets/sprites/Assets/UI/Themes/setting.tres" id="2_am25x"]
 [ext_resource type="PackedScene" uid="uid://04tw7iirgh22" path="res://scenes/Planets/planet01.tscn" id="3_gjs24"]
 [ext_resource type="Texture2D" uid="uid://cmyk7qg5fh2ky" path="res://assets/sprites/background/Background_2.png" id="4_am25x"]
 [ext_resource type="PackedScene" uid="uid://4vexgvcimoou" path="res://scenes/Planets/asteroid_mover.tscn" id="6_uhhto"]
 [ext_resource type="Texture2D" uid="uid://cc7i44nfn5ei0" path="res://assets/sprites/Assets/UI/Return.png" id="7_83j8s"]
 [ext_resource type="PackedScene" uid="uid://cf65nhnv2e43k" path="res://scenes/Effects/cameraEffect.tscn" id="9_4ppmf"]
+[ext_resource type="Texture2D" uid="uid://bnue7h051c7e1" path="res://assets/sprites/Assets/UI/MusicSymbol.png" id="9_am25x"]
 
 [sub_resource type="Curve2D" id="Curve2D_1g033"]
 bake_interval = 303.66
@@ -29,38 +29,6 @@ texture = ExtResource("7_83j8s")
 [node name="Settings" type="Node2D" unique_id=48634429]
 script = ExtResource("1_gjs24")
 
-[node name="Label" type="Label" parent="." unique_id=185785022]
-offset_left = -493.0
-offset_top = -136.0
-offset_right = -307.0
-offset_bottom = -96.0
-theme = ExtResource("2_am25x")
-text = "Music Volume:"
-
-[node name="Panel" type="Panel" parent="Label" unique_id=1257990407]
-z_index = -1
-layout_mode = 0
-offset_left = -37.0
-offset_top = -13.0
-offset_right = 215.0
-offset_bottom = 67.0
-
-[node name="Label2" type="Label" parent="." unique_id=106863897]
-offset_left = -494.0
-offset_top = -72.0
-offset_right = -321.0
-offset_bottom = -38.0
-theme = ExtResource("2_am25x")
-text = "Effects Volume:"
-
-[node name="Panel" type="Panel" parent="Label2" unique_id=581183010]
-z_index = -1
-layout_mode = 0
-offset_left = -37.0
-offset_top = -13.0
-offset_right = 215.0
-offset_bottom = 67.0
-
 [node name="MusicSlider" type="HSlider" parent="." unique_id=1977583117]
 offset_left = -294.0
 offset_top = -142.0
@@ -71,9 +39,9 @@ step = 0.01
 
 [node name="SfxSlider" type="HSlider" parent="." unique_id=2012426657]
 offset_left = -294.0
-offset_top = -77.0
+offset_top = -45.0
 offset_right = 203.0
-offset_bottom = -23.0
+offset_bottom = 9.0
 max_value = 1.0
 step = 0.01
 
@@ -81,7 +49,8 @@ step = 0.01
 z_index = -4096
 
 [node name="Background0" type="Sprite2D" parent="background" unique_id=754520818]
-position = Vector2(73, 11)
+position = Vector2(26, -2)
+scale = Vector2(0.6640967, 0.63611114)
 texture = ExtResource("1_gis3k")
 
 [node name="Frame" type="Sprite2D" parent="background" unique_id=1221016207]
@@ -92,7 +61,7 @@ texture = ExtResource("2_83j8s")
 
 [node name="Planet2" parent="background" unique_id=423020146 instance=ExtResource("3_gjs24")]
 position = Vector2(-425, 164)
-rotation = -900.8582
+rotation = -824.9398
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -105,7 +74,7 @@ texture = ExtResource("4_am25x")
 
 [node name="Planet" parent="background" unique_id=140036638 instance=ExtResource("3_gjs24")]
 position = Vector2(336, -96.99999)
-rotation = -629.1072
+rotation = -974.1908
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
@@ -149,6 +118,10 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_gjs24")
 theme_override_styles/focus = SubResource("StyleBoxTexture_gjs24")
 text = "
 "
+
+[node name="MusicSymbol" type="Sprite2D" parent="." unique_id=1491587958]
+position = Vector2(-403, -123)
+texture = ExtResource("9_am25x")
 
 [connection signal="changed" from="MusicSlider" to="." method="_on_music_slider_changed"]
 [connection signal="value_changed" from="MusicSlider" to="." method="_on_music_slider_value_changed"]
