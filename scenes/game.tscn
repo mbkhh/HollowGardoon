@@ -112,7 +112,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1473.9857
+rotation = -1111.6647
 SelectedType = "planet08"
 radius = 75.0
 mass = 56.25
@@ -125,7 +125,7 @@ texture = ExtResource("3_lbhrr")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(484.00003, -66.00001)
-rotation = -128.40836
+rotation = -611.48285
 SelectedType = "planet05"
 radius = 74.0
 mass = 54.76
