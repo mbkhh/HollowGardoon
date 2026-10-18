@@ -73,7 +73,7 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_vtaks")
 
 [node name="TitleBox" type="Sprite2D" parent="Buttons" unique_id=1793408442]
 z_index = -2
-position = Vector2(0, -133)
+position = Vector2(0, -157.00002)
 scale = Vector2(1.65, 1.65)
 texture = ExtResource("4_vtaks")
 
@@ -113,7 +113,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1371.895
+rotation = -1313.9878
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -132,7 +132,7 @@ texture = ExtResource("4_iywne")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(336, -96.99999)
-rotation = -37.221874
+rotation = 353.73935
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
