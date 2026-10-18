@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="15_i1xfl"]
 [ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="16_4vk2t"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/story_ending.tscn" id="17_story_ending"]
+[ext_resource type="PackedScene" path="res://scenes/Levels/final_flight.tscn" id="18_final_flight"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hvd7i"]
 normal = Vector2(0, 1)
@@ -27,6 +28,7 @@ texture = ExtResource("15_i1xfl")
 script = ExtResource("1_p2ncv")
 level_id = "level_15"
 ending_scene = ExtResource("17_story_ending")
+final_flight_path = NodePath("FinalFlight")
 metadata/_edit_horizontal_guides_ = [2048.0, 1297.0, 864.0, 1650.0]
 metadata/_edit_vertical_guides_ = [1534.0]
 
@@ -66,7 +68,7 @@ position = Vector2(278, 313)
 [node name="goal planet" type="Node" parent="." unique_id=956501010]
 
 [node name="Planet8" parent="goal planet" unique_id=51576449 groups=["planets"] instance=ExtResource("8_dchww")]
-position = Vector2(4806, 493.00015)
+position = Vector2(17500, 432)
 rotation = -473.14136
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
@@ -256,3 +258,5 @@ offset_left = -576.0
 offset_top = -322.0
 offset_right = 577.0
 offset_bottom = 321.0
+
+[node name="FinalFlight" parent="." instance=ExtResource("18_final_flight")]

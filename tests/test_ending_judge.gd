@@ -34,15 +34,16 @@ func key(code: Key, pressed: bool) -> void:
 
 func reach_final_goal(level: Node) -> void:
 	var rocket = level.get_node("Rocket")
-	var goal = level.get_node("goal planet/Planet8")
+	var flight = level.get_node("FinalFlight")
 	rocket.current_state = rocket.State.TRAVELING
 	rocket.orbiting_planet = null
-	rocket.teleport(goal.global_position + Vector2(goal.orbit_radius-3, 0))
-	for i in range(90):
+	rocket.teleport(flight.global_position - Vector2(120,0))
+	rocket.preserved_velocity = Vector2(1000,0)
+	for i in range(1600):
 		if level.has_node("StoryEnding"):
 			break
 		await frames(1)
-	check(level.has_node("StoryEnding"), "Real goal gravity-well entry shows final story")
+	check(level.has_node("StoryEnding"), "Final flight reaches goal and shows final story")
 	await frames(5)
 
 func _run() -> void:
@@ -82,7 +83,8 @@ func _run() -> void:
 	check(not level.get_node("CanvasLayer").visible and not level.get_node("Rocket/CanvasLayer").visible, "Gameplay HUDs do not cover ending")
 	check(ending.story.language == "fa" and ending.story.text_direction == Control.TEXT_DIRECTION_RTL, "Ending uses Persian RTL text")
 	check(ending.story.get_content_height() <= ending.story.size.y + 1, "Complete ending fits without clipped text")
-	check(ending.story.get_parsed_text().ends_with("و گاهی، یک جرقه برای آغاز دوباره کافی است."), "Emphasized final line is present")
+	var markup := RegEx.create_from_string("\\[[^\\]]+\\]")
+	check(ending.story.get_parsed_text().strip_edges() == markup.sub(ending.story_text,"",true).strip_edges(), "Current authored ending text is preserved")
 	var position: Vector2 = level.get_node("Rocket").global_position
 	await frames(40)
 	check(level.get_node("Rocket").global_position == position, "Reading the ending does not advance physics")

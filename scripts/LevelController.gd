@@ -14,6 +14,7 @@ var level_finished := false
 @export var level_id: String = "level_1"
 @export_file("*.tscn") var next_level_scene: String   # set this in the editor
 @export var ending_scene: PackedScene # Optional story ending, used by level 15.
+@export_node_path("Node") var final_flight_path: NodePath
 
 
 func _ready() -> void:
@@ -65,6 +66,8 @@ func _on_star_collected(index: int) -> void:
 
 func _on_goal_reached(body: Node2D) -> void:
 	if level_finished:
+		return
+	if not final_flight_path.is_empty() and not get_node(final_flight_path).can_finish():
 		return
 	level_finished = true
 	WinSfx.play_win()

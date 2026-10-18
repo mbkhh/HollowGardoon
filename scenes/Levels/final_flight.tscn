@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/final_flight.gd" id="1_flight"]
+[ext_resource type="Shader" path="res://scenes/Effects/final_darkness.gdshader" id="2_darkness"]
+
+[sub_resource type="RectangleShape2D" id="Shape_end_line"]
+size = Vector2(32, 3000)
+
+[sub_resource type="ShaderMaterial" id="Material_darkness"]
+resource_local_to_scene = true
+shader = ExtResource("2_darkness")
+shader_parameter/darkness = 0.0
+
+[node name="FinalFlight" type="Node2D"]
+position = Vector2(7400, 432)
+script = ExtResource("1_flight")
+
+[node name="Trigger" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1
+
+[node name="EndLine" type="CollisionShape2D" parent="Trigger"]
+shape = SubResource("Shape_end_line")
+
+[node name="Darkness" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+
+[node name="Shade" type="ColorRect" parent="Darkness"]
+material = SubResource("Material_darkness")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Actors" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="Visuals" type="Node2D" parent="Actors"]
