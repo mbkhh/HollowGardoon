@@ -50,13 +50,13 @@ target_path = NodePath("../Rocket")
 max_x = 100000.0
 
 [node name="Rocket" parent="." unique_id=1586143249 groups=["rocket"] instance=ExtResource("1_ptgt0")]
-position = Vector2(260, 341)
+position = Vector2(231, 448)
 
 [node name="goal planet" type="Node" parent="." unique_id=1974110730]
 
 [node name="Planet8" parent="goal planet" unique_id=1634106500 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1856.0001, 366.99994)
-rotation = 396.97678
+rotation = 399.49652
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet01"
@@ -68,7 +68,7 @@ orbit_radius = 100.0
 
 [node name="Planet6" parent="planets" unique_id=583936029 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(332, 451.99997)
-rotation = -1426.8032
+rotation = -1396.7722
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -76,7 +76,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1820529494 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(1354, 382)
-rotation = -2067.2764
+rotation = -2038.8977
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -85,7 +85,7 @@ orbit_radius = 137.5
 
 [node name="Planet9" parent="planets" unique_id=1434569353 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(8297, 806)
-rotation = -273.96304
+rotation = -281.71793
 SelectedType = "planet02"
 radius = 60.0
 mass = 36.0
@@ -93,7 +93,7 @@ orbit_radius = 100.0
 
 [node name="Planet14" parent="planets" unique_id=1859049650 groups=["planets"] instance=ExtResource("2_ac15f")]
 position = Vector2(816.0001, 392.0001)
-rotation = -1397.4747
+rotation = -1409.9904
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet04"
 
@@ -163,7 +163,7 @@ theme_override_fonts/font = ExtResource("11_vtd0g")
 theme_override_font_sizes/font_size = 28
 text = "سیاره های بزرگتر
 جاذبه قوی تری دارند.
-مطمئن شو شتابت کافی باشه. "
+مطمئن بشو تا شتاب کافی داشته باشی. "
 horizontal_alignment = 2
 
 [node name="Label3" type="Label" parent="Tutorials/Label3" unique_id=1812603661]
@@ -179,13 +179,13 @@ text = "مراقب خورشید باش!"
 
 [node name="Label" type="Label" parent="Tutorials" unique_id=1260155859]
 z_index = 3
-offset_left = 238.0
-offset_top = 140.0
-offset_right = 503.0
-offset_bottom = 185.0
+offset_left = 205.0
+offset_top = 138.0
+offset_right = 514.0
+offset_bottom = 186.0
 theme_override_fonts/font = ExtResource("11_vtd0g")
 theme_override_font_sizes/font_size = 32
-text = "خوش اومدی مسافر!"
+text = " پیامی برای آخرین امید:"
 horizontal_alignment = 2
 
 [node name="Label2" type="Label" parent="Tutorials" unique_id=340737318]
@@ -197,7 +197,7 @@ offset_bottom = 274.0
 theme_override_fonts/font = ExtResource("11_vtd0g")
 theme_override_font_sizes/font_size = 28
 text = "برای شارژ کردن موتور صفحه رو لمس کن.
-با رها کردنش سفینه وارد فضا میشه."
+با رها کردنش سفینه را به فضا میفرستی."
 horizontal_alignment = 2
 
 [node name="ParallaxBackground" parent="." unique_id=1790491331 instance=ExtResource("2_xxpsm")]
@@ -218,8 +218,8 @@ texture = ExtResource("13_iiv34")
 
 [node name="Sun" parent="." unique_id=304985471 groups=["planets"] instance=ExtResource("8_hk2jt")]
 position = Vector2(2438, 369.99994)
-rotation = -176.20584
+rotation = -170.35535
 
-[node name="StoryOpening" parent="." instance=ExtResource("16_story_opening")]
+[node name="StoryOpening" parent="." unique_id=1321478584 instance=ExtResource("16_story_opening")]
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]
