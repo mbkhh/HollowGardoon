@@ -72,9 +72,10 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_vtaks")
 theme_override_styles/focus = SubResource("StyleBoxTexture_vtaks")
 
 [node name="TitleBox" type="Sprite2D" parent="Buttons" unique_id=1793408442]
+visible = false
 z_index = -2
-position = Vector2(0, -133)
-scale = Vector2(1.65, 1.65)
+position = Vector2(1, -141)
+scale = Vector2(1.1591173, 2.3796875)
 texture = ExtResource("4_vtaks")
 
 [node name="shop" type="Button" parent="Buttons" unique_id=1566798450]
@@ -113,7 +114,7 @@ texture = ExtResource("4_gee14")
 
 [node name="Planet2" parent="background" unique_id=653861378 instance=ExtResource("6_p57ef")]
 position = Vector2(-425, 164)
-rotation = -1371.895
+rotation = -1415.9175
 SelectedType = "planet01"
 radius = 75.0
 mass = 56.25
@@ -132,7 +133,7 @@ texture = ExtResource("4_iywne")
 
 [node name="Planet" parent="background" unique_id=2134624745 instance=ExtResource("6_p57ef")]
 position = Vector2(336, -96.99999)
-rotation = -37.221874
+rotation = -76.57072
 SelectedType = "planet03"
 radius = 74.0
 mass = 54.76
@@ -156,16 +157,17 @@ rotation = 2.1786954
 speed = 50.0
 
 [node name="Label" type="Label" parent="." unique_id=587825357]
-offset_left = -264.0
-offset_top = -223.0
-offset_right = 278.0
-offset_bottom = -99.0
+offset_left = -277.0
+offset_top = -265.0
+offset_right = 265.0
+offset_bottom = -80.0
 theme = ExtResource("2_iywne")
-theme_override_colors/font_color = Color(0.9529412, 0.7607843, 0.52156866, 1)
-theme_override_colors/font_shadow_color = Color(0.12941177, 0.3882353, 0.5686275, 1)
+theme_override_colors/font_color = Color(0.067291945, 0.22260696, 0.9999487, 1)
+theme_override_colors/font_shadow_color = Color(0.47195482, 0.3360206, 0.27360633, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
-text = "Gardoon"
+theme_override_font_sizes/font_size = 150
+text = "Void"
 horizontal_alignment = 1
 vertical_alignment = 1
 
