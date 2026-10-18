@@ -84,7 +84,7 @@ position = Vector2(79, 443)
 
 [node name="Planet8" parent="goal planet" unique_id=1584790891 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(2865, 569.99994)
-rotation = -25.470623
+rotation = -16.276537
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -96,7 +96,7 @@ orbit_radius = 137.5
 
 [node name="Planet4" parent="planets" unique_id=1754267473 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(1270.9999, 564.99994)
-rotation = 116.41166
+rotation = 101.80097
 SelectedType = "planet03"
 radius = 60.0
 mass = 36.0
@@ -104,7 +104,7 @@ orbit_radius = 100.0
 
 [node name="Planet5" parent="planets" unique_id=1435337940 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(1858, 430.99994)
-rotation = -11.125088
+rotation = -6.544715
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet01"
 radius = 140.0
@@ -113,7 +113,7 @@ orbit_radius = 200.0
 
 [node name="Planet6" parent="planets" unique_id=1919453547 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(863.99994, 272)
-rotation = -206.14476
+rotation = -210.36368
 SelectedType = "planet04"
 radius = 60.0
 mass = 36.0
@@ -121,7 +121,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1888432985 groups=["planets"] instance=ExtResource("4_pvfsd")]
 position = Vector2(93, 613)
-rotation = 28.957275
+rotation = 18.20724
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet05"
 radius = 90.0
@@ -132,14 +132,14 @@ orbit_radius = 137.5
 
 [node name="Sun" parent="suns" unique_id=1011716644 groups=["planets"] instance=ExtResource("10_cu6c6")]
 position = Vector2(487, 429.99994)
-rotation = -163.2401
+rotation = -165.14032
 radius = 120.0
 mass = 288.0
 orbit_radius = 175.0
 
 [node name="Sun2" parent="suns" unique_id=301605888 groups=["planets"] instance=ExtResource("10_cu6c6")]
 position = Vector2(2491, 312)
-rotation = -473.5232
+rotation = -462.84006
 
 [node name="Stars" type="Node" parent="." unique_id=1711105416]
 
@@ -234,7 +234,8 @@ offset_right = 2189.0
 offset_bottom = 777.0
 theme_override_fonts/font = ExtResource("16_3bt0o")
 theme_override_font_sizes/font_size = 28
-text = "برای جدا شدن از سیاره های بزرگتر به شتاب بیشتری احتیاج داری"
+text = "برای جدا شدن از سیاره های بزرگتر به شتاب بیشتری احتیاج داری.
+اگر شتابت کافی نداشته باشی، داخل جاذبه سیاره ها سقوط می‌کنی..."
 horizontal_alignment = 2
 
 [connection signal="pressed" from="CanvasLayer/PuaseBtn" to="." method="_on_puase_btn_pressed"]
