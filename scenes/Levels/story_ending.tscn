@@ -1,12 +1,8 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene format=3 uid="uid://b5eoov0obodkc"]
 
-[ext_resource type="Script" path="res://scripts/story_ending.gd" id="1_ending"]
-[ext_resource type="FontFile" path="res://assets/fonts/فونت سرباز.ttf" id="2_persian"]
-[ext_resource type="Theme" path="res://assets/sprites/Assets/UI/Themes/Button.tres" id="3_button"]
-
-[sub_resource type="FontVariation" id="Font_emphasis"]
-base_font = ExtResource("2_persian")
-variation_embolden = 0.7
+[ext_resource type="Script" uid="uid://cl0c6028dmw2e" path="res://scripts/story_ending.gd" id="1_ending"]
+[ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="2_persian"]
+[ext_resource type="Theme" uid="uid://bkse6ryihngnw" path="res://assets/sprites/Assets/UI/Themes/Button.tres" id="3_button"]
 
 [sub_resource type="StyleBoxFlat" id="Style_card"]
 bg_color = Color(0.025, 0.038, 0.07, 0.94)
@@ -20,12 +16,23 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="StoryEnding" type="CanvasLayer"]
+[sub_resource type="FontVariation" id="Font_emphasis"]
+base_font = ExtResource("2_persian")
+variation_embolden = 0.7
+
+[node name="StoryEnding" type="CanvasLayer" unique_id=1240691263]
 process_mode = 3
 layer = 30
 script = ExtResource("1_ending")
+story_text = "از یک سیاره به دیگری،
+در میان امید‌ها، ستاره‌ها، تاریکی و سیاه‌چاله‌ها رفتم.
+تا سرزمینی را مملو از زندگی بیابم.
+اما...
+هنوز دنیا خالی است،
+بدون تو
+"
 
-[node name="Screen" type="Control" parent="."]
+[node name="Screen" type="Control" parent="." unique_id=304947741]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +40,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Shade" type="ColorRect" parent="Screen"]
+[node name="Shade" type="ColorRect" parent="Screen" unique_id=1975234040]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,13 +50,14 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.015, 0.025, 0.045, 0.65)
 
-[node name="Card" type="PanelContainer" parent="Screen"]
+[node name="Card" type="PanelContainer" parent="Screen" unique_id=134994209]
+layout_mode = 0
 offset_right = 968.0
 offset_bottom = 600.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("Style_card")
 
-[node name="Margin" type="MarginContainer" parent="Screen/Card"]
+[node name="Margin" type="MarginContainer" parent="Screen/Card" unique_id=1908463820]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 42
@@ -57,49 +65,48 @@ theme_override_constants/margin_top = 22
 theme_override_constants/margin_right = 42
 theme_override_constants/margin_bottom = 22
 
-[node name="Content" type="VBoxContainer" parent="Screen/Card/Margin"]
+[node name="Content" type="VBoxContainer" parent="Screen/Card/Margin" unique_id=756788331]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 12
 
-[node name="Story" type="RichTextLabel" parent="Screen/Card/Margin/Content"]
+[node name="Story" type="RichTextLabel" parent="Screen/Card/Margin/Content" unique_id=848878790]
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
-text_direction = 2
-language = "fa"
 theme_override_colors/default_color = Color(0.91, 0.94, 0.97, 1)
+theme_override_constants/line_separation = 4
 theme_override_fonts/normal_font = ExtResource("2_persian")
 theme_override_fonts/bold_font = SubResource("Font_emphasis")
 theme_override_font_sizes/normal_font_size = 26
 theme_override_font_sizes/bold_font_size = 26
-theme_override_constants/line_separation = 4
 bbcode_enabled = true
 scroll_active = false
 vertical_alignment = 1
+text_direction = 2
+language = "fa"
 
-[node name="Actions" type="HBoxContainer" parent="Screen/Card/Margin/Content"]
+[node name="Actions" type="HBoxContainer" parent="Screen/Card/Margin/Content" unique_id=1689145177]
 layout_mode = 2
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="MainMenu" type="Button" parent="Screen/Card/Margin/Content/Actions"]
+[node name="MainMenu" type="Button" parent="Screen/Card/Margin/Content/Actions" unique_id=583378016]
 custom_minimum_size = Vector2(230, 56)
 layout_mode = 2
 theme = ExtResource("3_button")
 theme_override_font_sizes/font_size = 23
 text = "Main Menu"
 
-[node name="LevelSelect" type="Button" parent="Screen/Card/Margin/Content/Actions"]
+[node name="LevelSelect" type="Button" parent="Screen/Card/Margin/Content/Actions" unique_id=1831025283]
 custom_minimum_size = Vector2(230, 56)
 layout_mode = 2
 theme = ExtResource("3_button")
 theme_override_font_sizes/font_size = 23
 text = "Level Select"
 
-[node name="Prompt" type="Label" parent="Screen/Card/Margin/Content"]
+[node name="Prompt" type="Label" parent="Screen/Card/Margin/Content" unique_id=1072548412]
 layout_mode = 2
-mouse_filter = 2
 theme_override_colors/font_color = Color(0.59, 0.75, 0.86, 1)
 theme_override_font_sizes/font_size = 14
 text = "SPACE - Main Menu"

@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://retmwtc1ypy3" path="res://scripts/LevelController.gd" id="1_p2ncv"]
 [ext_resource type="PackedScene" uid="uid://bky7qcxytwu6s" path="res://scenes/Levels/parallax_background.tscn" id="2_n21eg"]
-[ext_resource type="Texture2D" uid="uid://3j06lv1do5d2" path="res://assets/sprites/background/Background_C_1.png" id="3_6p3m3"]
-[ext_resource type="Texture2D" uid="uid://ccs5y2v7728u" path="res://assets/sprites/background/Background_C_2.png" id="4_jlw0i"]
 [ext_resource type="PackedScene" uid="uid://bcn1xdis2ddgp" path="res://scenes/killzone.tscn" id="5_2be3e"]
 [ext_resource type="PackedScene" uid="uid://ofctocr5ms4d" path="res://scenes/follow_camera_2d.tscn" id="6_pxxlb"]
 [ext_resource type="PackedScene" uid="uid://ct7uxy4sept54" path="res://scenes/Rocket/rocket.tscn" id="7_l5tkh"]
@@ -14,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://crerankty05s0" path="res://scenes/pause_menu.tscn" id="13_k1fym"]
 [ext_resource type="PackedScene" uid="uid://datxgs26v6hyr" path="res://scenes/star_hud.tscn" id="14_a7qsw"]
 [ext_resource type="Texture2D" uid="uid://beyg1hs156pco" path="res://assets/sprites/Assets/UI/PauseButton.png" id="15_i1xfl"]
-[ext_resource type="FontFile" uid="uid://beme3hg58un3x" path="res://assets/fonts/فونت سرباز.ttf" id="15_pia5d"]
 [ext_resource type="PackedScene" uid="uid://bn8ptlhuvtkhq" path="res://scenes/level_complete.tscn" id="16_4vk2t"]
 [ext_resource type="PackedScene" path="res://scenes/Levels/story_ending.tscn" id="17_story_ending"]
 
@@ -38,24 +35,8 @@ metadata/_edit_vertical_guides_ = [1534.0]
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=274137051]
 motion_mirroring = Vector2(2304, 0)
 
-[node name="BackgroundC1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=1129755103]
-position = Vector2(576, 702)
-texture = ExtResource("3_6p3m3")
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=1969010679]
-position = Vector2(1728, 702)
-texture = ExtResource("3_6p3m3")
-
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1517115711]
 motion_mirroring = Vector2(2304, 0)
-
-[node name="BackgroundC2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=867313503]
-position = Vector2(576, 162)
-texture = ExtResource("4_jlw0i")
-
-[node name="BackgroundC3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1000246335]
-position = Vector2(1728, 162)
-texture = ExtResource("4_jlw0i")
 
 [node name="killNodes" type="Node" parent="." unique_id=546904261]
 
@@ -86,7 +67,7 @@ position = Vector2(278, 313)
 
 [node name="Planet8" parent="goal planet" unique_id=51576449 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(4806, 493.00015)
-rotation = -409.64
+rotation = -473.14136
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -115,13 +96,13 @@ linked_whitehole = NodePath("../Whitehole7")
 radius = 120.0
 
 [node name="Whitehole7" parent="wormwholes" unique_id=2050424445 node_paths=PackedStringArray("linked_whitehole") instance=ExtResource("9_wpmxb")]
-position = Vector2(-2663.0005, 690)
+position = Vector2(-3223.0002, 690.0001)
 rotation = -0.7212936
 linked_whitehole = NodePath(".")
 radius = 120.0
 
 [node name="Whitehole8" parent="wormwholes" unique_id=1216741915 node_paths=PackedStringArray("linked_whitehole") instance=ExtResource("9_wpmxb")]
-position = Vector2(-7032.001, 625.99994)
+position = Vector2(-6102.0005, 659)
 rotation = -1.4425873
 linked_whitehole = NodePath("../Whitehole9")
 radius = 120.0
@@ -136,7 +117,7 @@ radius = 120.0
 
 [node name="Planet6" parent="planets" unique_id=769553430 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(166, 270)
-rotation = 50.07231
+rotation = -72.616554
 SelectedType = "planet01"
 radius = 60.0
 mass = 36.0
@@ -144,21 +125,21 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=2089967823 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(762, 620)
-rotation = -19.043198
+rotation = -181.70656
 radius = 100.0
 mass = 100.0
 orbit_radius = 150.0
 
 [node name="Planet8" parent="planets" unique_id=1208439455 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(2031, 263.99997)
-rotation = -149.99532
+rotation = -261.9299
 radius = 100.0
 mass = 100.0
 orbit_radius = 150.0
 
 [node name="Planet9" parent="planets" unique_id=360081979 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(1648, 707)
-rotation = -57.684105
+rotation = 13.993989
 SelectedType = "planet04"
 radius = 40.0
 mass = 16.0
@@ -166,7 +147,7 @@ orbit_radius = 75.0
 
 [node name="Planet10" parent="planets" unique_id=559096413 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(-5407.0005, 602.9999)
-rotation = 203.56354
+rotation = 373.4515
 SelectedType = "planet02"
 radius = 150.0
 mass = 225.0
@@ -174,7 +155,7 @@ orbit_radius = 212.5
 
 [node name="Planet11" parent="planets" unique_id=1890998692 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(-3649.9998, 250.99997)
-rotation = 152.73401
+rotation = 271.73538
 SelectedType = "planet07"
 radius = 150.0
 mass = 225.0
@@ -182,7 +163,7 @@ orbit_radius = 212.5
 
 [node name="Planet12" parent="planets" unique_id=974413392 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(6221.0005, 210.99997)
-rotation = -17.810055
+rotation = 22.05974
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet04"
 radius = 100.0
@@ -191,7 +172,7 @@ orbit_radius = 150.0
 
 [node name="Planet13" parent="planets" unique_id=976981976 groups=["planets"] instance=ExtResource("8_dchww")]
 position = Vector2(6234, 682.99994)
-rotation = -54.604095
+rotation = -96.81861
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet08"
 radius = 100.0
@@ -202,7 +183,7 @@ orbit_radius = 150.0
 
 [node name="Sun2" parent="suns" unique_id=1055301592 groups=["planets"] instance=ExtResource("10_q38y5")]
 position = Vector2(-1788, 448)
-rotation = -145.37802
+rotation = -82.609634
 radius = 350.0
 density = 0.015
 mass = 1837.5
@@ -210,7 +191,7 @@ orbit_radius = 462.5
 
 [node name="Sun3" parent="suns" unique_id=920276880 groups=["planets"] instance=ExtResource("10_q38y5")]
 position = Vector2(3122, 428.99994)
-rotation = -368.20557
+rotation = -374.66333
 radius = 350.0
 density = 0.015
 mass = 1837.5
@@ -234,18 +215,6 @@ star_index = 1
 [node name="Asteroids" type="Node" parent="." unique_id=640410150]
 
 [node name="moons" type="Node" parent="." unique_id=724298750]
-
-[node name="Label" type="Label" parent="." unique_id=1565643766]
-visible = false
-z_index = 3
-offset_left = 342.0
-offset_top = 346.0
-offset_right = 607.0
-offset_bottom = 394.0
-theme_override_fonts/font = ExtResource("15_pia5d")
-theme_override_font_sizes/font_size = 32
-text = "ممنون که بازی کردی!"
-horizontal_alignment = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1785937345]
 offset = Vector2(576, 324)

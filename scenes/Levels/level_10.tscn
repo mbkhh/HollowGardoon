@@ -84,7 +84,7 @@ position = Vector2(278, 313)
 
 [node name="Planet8" parent="goal planet" unique_id=160661400 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(4486, 583)
-rotation = -625.17523
+rotation = -626.73254
 scale = Vector2(0.9999998, 0.9999998)
 is_goal_planet = true
 SelectedType = "planet03"
@@ -110,7 +110,7 @@ radius = 90.0
 
 [node name="Planet2" parent="planets" unique_id=1463015266 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(3566.0005, 714.9999)
-rotation = -614.2112
+rotation = -613.6344
 SelectedType = "planet08"
 radius = 60.0
 mass = 36.0
@@ -118,14 +118,14 @@ orbit_radius = 100.0
 
 [node name="Planet4" parent="planets" unique_id=768305275 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(811, 417.99997)
-rotation = -70.846725
+rotation = -70.47422
 radius = 150.0
 mass = 225.0
 orbit_radius = 212.5
 
 [node name="Planet6" parent="planets" unique_id=923971394 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(185, 360.00006)
-rotation = 19.08085
+rotation = 19.763376
 SelectedType = "planet01"
 radius = 60.0
 mass = 36.0
@@ -133,7 +133,7 @@ orbit_radius = 100.0
 
 [node name="Planet7" parent="planets" unique_id=1885590283 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(1386, 617.99994)
-rotation = 318.8926
+rotation = 318.0082
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet08"
 radius = 90.0
@@ -142,7 +142,7 @@ orbit_radius = 137.5
 
 [node name="Planet14" parent="planets" unique_id=864828357 groups=["planets"] instance=ExtResource("6_g10o8")]
 position = Vector2(3903.0002, 302.00018)
-rotation = -792.2433
+rotation = -792.4932
 scale = Vector2(0.99999994, 0.99999994)
 SelectedType = "planet07"
 radius = 90.0
@@ -153,13 +153,13 @@ orbit_radius = 137.5
 
 [node name="Sun" parent="suns" unique_id=59193569 groups=["planets"] instance=ExtResource("8_8b5qq")]
 position = Vector2(1436, 60)
-rotation = -657.9535
+rotation = -656.7615
 density = 0.015
 mass = 150.0
 
 [node name="Sun2" parent="suns" unique_id=1625489407 groups=["planets"] instance=ExtResource("8_8b5qq")]
 position = Vector2(2666.9995, 446.99997)
-rotation = -353.04745
+rotation = -352.39377
 radius = 350.0
 density = 0.015
 mass = 1837.5
