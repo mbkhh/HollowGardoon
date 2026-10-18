@@ -61,7 +61,7 @@ texture = ExtResource("2_ajxib")
 
 [node name="Planet2" parent="background" unique_id=1802480522 instance=ExtResource("3_y6sft")]
 position = Vector2(163.00003, -544)
-rotation = -1291.4827
+rotation = -1270.6482
 SelectedType = "planet02"
 radius = 75.0
 mass = 56.25
@@ -80,7 +80,7 @@ texture = ExtResource("5_heatd")
 
 [node name="Planet" parent="background" unique_id=428805308 instance=ExtResource("3_y6sft")]
 position = Vector2(-360, 169)
-rotation = 195.24767
+rotation = 160.23418
 SelectedType = "planet04"
 radius = 74.0
 mass = 54.76
@@ -166,7 +166,7 @@ offset_top = 185.0
 offset_right = 217.0
 offset_bottom = 228.0
 theme_override_font_sizes/font_size = 25
-text = "Space Ship 1"
+text = "offspring of war"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -193,7 +193,7 @@ offset_top = 185.0
 offset_right = 215.0
 offset_bottom = 228.0
 theme_override_font_sizes/font_size = 25
-text = "Space Ship 1"
+text = "Mirazh"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -219,7 +219,7 @@ offset_top = 188.0
 offset_right = 220.0
 offset_bottom = 231.0
 theme_override_font_sizes/font_size = 25
-text = "Space Ship 1"
+text = "Hollow Ship"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -259,7 +259,7 @@ offset_top = 185.0
 offset_right = 213.0
 offset_bottom = 228.0
 theme_override_font_sizes/font_size = 25
-text = "Space Ship 1"
+text = "Void runner"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -293,10 +293,10 @@ text = "
 "
 
 [node name="Setting" type="Button" parent="Buttons" unique_id=694220383]
-offset_left = 447.0
-offset_top = -321.0
-offset_right = 573.0
-offset_bottom = -221.0
+offset_left = 455.0
+offset_top = -302.0
+offset_right = 551.0
+offset_bottom = -202.0
 pivot_offset = Vector2(58, 50)
 theme_override_styles/normal = SubResource("StyleBoxTexture_5u241")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5u241")
@@ -309,17 +309,17 @@ stream = ExtResource("18_pqync")
 bus = &"SFX"
 
 [node name="SpaceShip2" type="Sprite2D" parent="." unique_id=368075315]
-position = Vector2(-139, -72)
+position = Vector2(-139.00002, -88)
 scale = Vector2(0.35528758, 0.35528755)
 texture = ExtResource("17_yuijs")
 
 [node name="SpaceShip3" type="Sprite2D" parent="." unique_id=607692749]
-position = Vector2(140, -70.00001)
+position = Vector2(140, -81.00001)
 scale = Vector2(0.34532374, 0.3453237)
 texture = ExtResource("18_aa4hd")
 
 [node name="SpaceShip4" type="Sprite2D" parent="." unique_id=1375428505]
-position = Vector2(410, -59)
+position = Vector2(406, -92)
 scale = Vector2(0.35921848, 0.35921845)
 texture = ExtResource("19_68utx")
 
