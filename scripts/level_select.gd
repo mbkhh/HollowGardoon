@@ -8,6 +8,7 @@ var level_button_scene := preload("res://scenes/UI/level_button.tscn")
 const TOTAL_LEVELS := SaveManager.TOTAL_LEVELS
 
 func _ready() -> void:
+	$JudgeBanner.visible = SaveManager.judge_mode
 	_update_xp_label()
 	_create_level_buttons()
 
@@ -42,6 +43,8 @@ func _create_level_buttons():
 
 
 func _is_level_unlocked(level_number: int) -> bool:
+	if SaveManager.judge_mode:
+		return true
 	# Simple logic:
 	# - Level 1 always unlocked
 	# - Level n unlocked if level n-1 is completed
